@@ -1,0 +1,606 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="12">
+	<component name="defaultmap1" blackbox="0" uid="65570112" editable="1">
+		<properties XSLTTargetEncoding="UTF-8" SelectedLanguage="cpp"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="65573272" kind="2">
+					<targets>
+						<datapoint pos="0" key="101190488"/>
+					</targets>
+					<view ltx="470" lty="18" rbx="-2" rby="-332"/>
+					<data>
+						<constant value="PO" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="65574536" kind="2">
+					<targets>
+						<datapoint pos="0" key="101191280"/>
+					</targets>
+					<view ltx="350" lty="25" rbx="-122" rby="-325"/>
+					<data>
+						<constant value="SenderID" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="65575816" kind="2">
+					<targets>
+						<datapoint pos="0" key="101192064"/>
+					</targets>
+					<view ltx="359" lty="81" rbx="-113" rby="-269"/>
+					<data>
+						<constant value="ReceiverID" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="65578368" kind="2">
+					<targets>
+						<datapoint pos="0" key="101192848"/>
+					</targets>
+					<view ltx="378" lty="340" rbx="-94" rby="-10"/>
+					<data>
+						<constant value="006040" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="65579632" kind="2">
+					<targets>
+						<datapoint pos="0" key="101193616"/>
+					</targets>
+					<view ltx="314" lty="303" rbx="-158" rby="-47"/>
+					<data>
+						<constant value="SA" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="65580896" kind="2">
+					<targets>
+						<datapoint pos="0" key="101194400"/>
+					</targets>
+					<view ltx="328" lty="262" rbx="-144" rby="-88"/>
+					<data>
+						<constant value="00" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="120386267" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="101195168"/>
+					</targets>
+					<view ltx="352" lty="378" rbx="-191" rby="93"/>
+					<data>
+						<constant value="12345" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="date-from-datetime" library="lang" uid="120386265" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="101196208"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="101196352"/>
+					</targets>
+					<view ltx="353" lty="111" rbx="29" rby="-17"/>
+				</component>
+				<component name="time-from-datetime" library="lang" uid="120386266" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="101197368"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="101197512"/>
+					</targets>
+					<view ltx="355" lty="174" rby="-31"/>
+				</component>
+				<component name="constant" library="core" uid="65577088" kind="2">
+					<targets>
+						<datapoint pos="0" key="101198504"/>
+					</targets>
+					<view ltx="384" lty="302" rbx="-88" rby="-48"/>
+					<data>
+						<constant value="X" datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="120386269" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="101199272"/>
+					</targets>
+					<view ltx="313" lty="321" rbx="-19" rby="-17"/>
+					<data>
+						<constant value="BY" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="CalculateTaxRateFromPriceAndTax" library="UserEDIHelpers" blackbox="0" uid="120386268" kind="19" visible="0">
+					<view ltx="265" lty="516" rbx="385" rby="550"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="value1" inpkey="101208512" componentid="88337624"/>
+							<entry name="value2" inpkey="101208368" componentid="79261336"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="101398368" componentid="66867768"/>
+						</root>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="120386271" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="101200528"/>
+					</targets>
+					<view ltx="442" lty="409" rbx="-16" rby="-58"/>
+					<data>
+						<constant value="F" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="65587472" kind="2">
+					<targets>
+						<datapoint pos="0" key="101203112"/>
+					</targets>
+					<view ltx="485" lty="56" rbx="13" rby="-294"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="120386270" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="101203880"/>
+					</targets>
+					<view ltx="348" lty="491" rbx="-102" rby="51"/>
+					<data>
+						<constant value="TX" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="120386272" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="101204888"/>
+					</targets>
+					<view ltx="383" lty="233" rbx="65" rby="-227"/>
+					<data>
+						<constant value="ZZ" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="120386264" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="207" rby="554"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="Order" outkey="101395536" expanded="1">
+								<entry name="Header" expanded="1">
+									<entry name="Number" outkey="107176936"/>
+									<entry name="Received" outkey="101382736"/>
+								</entry>
+								<entry name="Customer" outkey="107176672" expanded="1">
+									<entry name="Number" outkey="101397008"/>
+									<entry name="ContactName" outkey="107095640"/>
+									<entry name="CompanyName" outkey="107095824"/>
+									<entry name="Address" outkey="107096008" expanded="1">
+										<entry name="Street" outkey="108290744"/>
+										<entry name="City" outkey="108290968"/>
+										<entry name="ZIP" outkey="108291152"/>
+										<entry name="State" outkey="108291376"/>
+									</entry>
+								</entry>
+								<entry name="LineItems" expanded="1">
+									<entry name="LineItem" outkey="108291600" expanded="1">
+										<entry name="Article" expanded="1">
+											<entry name="Number" outkey="107793776"/>
+											<entry name="Name" outkey="107794000"/>
+											<entry name="SinglePrice" outkey="107794184"/>
+											<entry name="Amount" outkey="107794408"/>
+											<entry name="Price" outkey="107794632"/>
+											<entry name="Tax" outkey="107176448"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Order.xsd" inputinstance="OrdersSource.xml" outputinstance="OrdersSource.xml" instanceroot="{}Order"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="120386273" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="101206808"/>
+					</targets>
+					<view ltx="438" lty="377" rbx="-30" rby="3"/>
+					<data>
+						<constant value="US" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="edi" library="text" uid="65588736" kind="16">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="610" lty="9" rbx="983" rby="575"/>
+					<data>
+						<root scrollposition="527">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="Envelope" expanded="1">
+								<entry name="Interchange" inpkey="108114624" expanded="1">
+									<entry name="ISA">
+										<entry name="FI06" inpkey="107475128"/>
+										<entry name="FI07" inpkey="108272856"/>
+										<entry name="FI08" inpkey="108273080"/>
+										<entry name="FI09" inpkey="107551776"/>
+										<entry name="FI12" inpkey="108319632"/>
+									</entry>
+									<entry name="Group" expanded="1">
+										<entry name="GS">
+											<entry name="F479" inpkey="107550960"/>
+											<entry name="F142" inpkey="107551104"/>
+											<entry name="F124" inpkey="107551328"/>
+											<entry name="F373" inpkey="108114848"/>
+											<entry name="F337" inpkey="107858544"/>
+											<entry name="F28" inpkey="107858768"/>
+											<entry name="F455" inpkey="107824584"/>
+											<entry name="F480" inpkey="107824808"/>
+										</entry>
+										<entry name="Message" expanded="1">
+											<entry name="ST">
+												<entry name="F329" inpkey="108332008"/>
+											</entry>
+											<entry name="BEG">
+												<entry name="F353" inpkey="107551960"/>
+												<entry name="F92" inpkey="107517600"/>
+												<entry name="F324" inpkey="107859032"/>
+												<entry name="F373" inpkey="107859256"/>
+											</entry>
+											<entry name="LoopN1" expanded="1">
+												<entry name="N1" inpkey="107859440" expanded="1">
+													<entry name="F98_1" inpkey="107474904"/>
+													<entry name="F93" inpkey="107474272"/>
+													<entry name="F66" inpkey="107474456"/>
+													<entry name="F67" inpkey="107474680"/>
+												</entry>
+												<entry name="N2" expanded="1">
+													<entry name="F93" inpkey="107518048"/>
+												</entry>
+												<entry name="N3" inpkey="108273752" expanded="1">
+													<entry name="F166" inpkey="108319896"/>
+												</entry>
+												<entry name="N4" inpkey="108319448" expanded="1">
+													<entry name="F19" inpkey="108320120"/>
+													<entry name="F156" inpkey="108320344"/>
+													<entry name="F116" inpkey="108332232"/>
+													<entry name="F26" inpkey="107129408"/>
+												</entry>
+											</entry>
+											<entry name="LoopPO1" inpkey="108331336" expanded="1">
+												<entry name="PO1" expanded="1">
+													<entry name="F380" inpkey="107517824"/>
+													<entry name="F212" inpkey="108331560"/>
+													<entry name="F235_01" inpkey="108331784"/>
+													<entry name="F234_01" inpkey="107129632"/>
+												</entry>
+												<entry name="LoopPID">
+													<entry name="PID" expanded="1">
+														<entry name="F349" inpkey="107518272"/>
+														<entry name="F352" inpkey="107551552"/>
+													</entry>
+												</entry>
+												<entry name="TXI">
+													<entry name="F963" inpkey="108273264"/>
+													<entry name="F954" inpkey="108273528"/>
+												</entry>
+												<entry name="LoopN1">
+													<entry name="N3" expanded="1"/>
+													<entry name="N4" expanded="1"/>
+												</entry>
+												<entry name="LoopAMT">
+													<entry name="AMT" expanded="1">
+														<entry name="F522" inpkey="107824360"/>
+														<entry name="F782" inpkey="107824096"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<text type="edi" kind="EDIX12" encoding="1000" byteorder="1" byteordermark="0" config="X12\850.Config">
+							<settings unpackedformat="false" autocompletedata="true" terminatewithlinefeed="true" subelementseparator="!" interchangecontrolversionnumber="00505" requestacknowledgement="true">
+								<separators dataelement="+" component=":" subcomponent="%20" segment="&apos;" decimal="." escape="?" repetition="!"/>
+							</settings>
+						</text>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="101190488">
+						<edges>
+							<edge vertexkey="107550960" edgekey="107117088"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101191280">
+						<edges>
+							<edge vertexkey="107475128" edgekey="107116592"/>
+							<edge vertexkey="107551104" edgekey="107115480"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101192064">
+						<edges>
+							<edge vertexkey="108272856" edgekey="107115536"/>
+							<edge vertexkey="107551328" edgekey="107115272"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101192848">
+						<edges>
+							<edge vertexkey="107824808" edgekey="107113312"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101193616">
+						<edges>
+							<edge vertexkey="107517600" edgekey="107112592"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101194400">
+						<edges>
+							<edge vertexkey="107551960" edgekey="107112344"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101195168">
+						<edges>
+							<edge vertexkey="108332008" edgekey="107107608"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101196352">
+						<edges>
+							<edge vertexkey="108273080" edgekey="107109128"/>
+							<edge vertexkey="107859256" edgekey="107108880"/>
+							<edge vertexkey="108114848" edgekey="107108632"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101197512">
+						<edges>
+							<edge vertexkey="107551776" edgekey="107108384"/>
+							<edge vertexkey="107858544" edgekey="107107856"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101198504">
+						<edges>
+							<edge vertexkey="107824584" edgekey="107112040"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101199272">
+						<edges>
+							<edge vertexkey="107474904" edgekey="107121192"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101200528">
+						<edges>
+							<edge vertexkey="107518272" edgekey="107091296"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101203112">
+						<edges>
+							<edge vertexkey="108319632" edgekey="107112096"/>
+							<edge vertexkey="107858768" edgekey="107111600"/>
+							<edge vertexkey="107824360" edgekey="107109936"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101203880">
+						<edges>
+							<edge vertexkey="108273264" edgekey="107091824"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101204888">
+						<edges>
+							<edge vertexkey="107474456" edgekey="107118144"/>
+							<edge vertexkey="108331784" edgekey="107117896"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101206808">
+						<edges>
+							<edge vertexkey="107129408" edgekey="107090488"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101382736">
+						<edges>
+							<edge vertexkey="101196208" edgekey="107097784"/>
+							<edge vertexkey="101197368" edgekey="107102312"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101395536">
+						<edges>
+							<edge vertexkey="108114624" edgekey="107104424"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101397008">
+						<edges>
+							<edge vertexkey="107474680" edgekey="107101552"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="101398368">
+						<edges>
+							<edge vertexkey="108273528" edgekey="107120384"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="107095640">
+						<edges>
+							<edge vertexkey="107518048" edgekey="107100744"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="107095824">
+						<edges>
+							<edge vertexkey="107474272" edgekey="107100496"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="107096008">
+						<edges>
+							<edge vertexkey="108273752" edgekey="107100248"/>
+							<edge vertexkey="108319448" edgekey="107098584"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="107176448">
+						<edges>
+							<edge vertexkey="101208512" edgekey="107092792"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="107176672">
+						<edges>
+							<edge vertexkey="107859440" edgekey="107103896"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="107176936">
+						<edges>
+							<edge vertexkey="107859032" edgekey="107103088"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="107793776">
+						<edges>
+							<edge vertexkey="107129632" edgekey="107092544"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="107794000">
+						<edges>
+							<edge vertexkey="107551552" edgekey="107095152"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="107794184">
+						<edges>
+							<edge vertexkey="108331560" edgekey="107094904"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="107794408">
+						<edges>
+							<edge vertexkey="107517824" edgekey="107093816"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="107794632">
+						<edges>
+							<edge vertexkey="101208368" edgekey="107093568"/>
+							<edge vertexkey="107824096" edgekey="107093320"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="108290744">
+						<edges>
+							<edge vertexkey="108319896" edgekey="107098336"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="108290968">
+						<edges>
+							<edge vertexkey="108320120" edgekey="107098088"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="108291152">
+						<edges>
+							<edge vertexkey="108332232" edgekey="107097840"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="108291376">
+						<edges>
+							<edge vertexkey="108320344" edgekey="107084168"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="108291600">
+						<edges>
+							<edge vertexkey="108331336" edgekey="107096240"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="CalculateTaxRateFromPriceAndTax" library="UserEDIHelpers" blackbox="0" uid="56771000" editable="1">
+		<sources>
+			<datapoint name="value1" datatype="decimal" connectiontype="0"/>
+			<datapoint name="value2" datatype="decimal" connectiontype="0"/>
+		</sources>
+		<targets>
+			<datapoint name="result" datatype="string"/>
+		</targets>
+		<structure>
+			<children>
+				<component name="divide" library="core" uid="56553376" kind="5">
+					<sources>
+						<datapoint pos="0" key="90598392"/>
+						<datapoint pos="1" key="90747040"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="90742832"/>
+					</targets>
+					<view ltx="264" lty="63" rbx="-114" rby="-465"/>
+				</component>
+				<component name="value2" library="core" uid="79261336" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="90597368"/>
+					</targets>
+					<view ltx="-131" lty="143" rbx="-1" rby="93"/>
+					<data>
+						<input name="value2" datatype="decimal" number="2" connectiontype="0"/>
+						<parameter usageKind="input" name="value2" optional="1"/>
+					</data>
+				</component>
+				<component name="result" library="core" uid="66867768" kind="7">
+					<sources>
+						<datapoint pos="0" key="81786096"/>
+					</sources>
+					<view ltx="509" lty="70" rbx="276" rby="70"/>
+					<data>
+						<output name="result" datatype="string" number="1"/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="value1" library="core" uid="88337624" kind="6">
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="90601168"/>
+					</targets>
+					<view ltx="-130"/>
+					<data>
+						<input name="value1" datatype="decimal" number="1" connectiontype="0"/>
+						<parameter usageKind="input" name="value1" optional="1"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="90597368">
+						<edges>
+							<edge vertexkey="90747040" edgekey="90603720"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="90601168">
+						<edges>
+							<edge vertexkey="90598392" edgekey="90743320"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="90742832">
+						<edges>
+							<edge vertexkey="81786096" edgekey="90743576"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

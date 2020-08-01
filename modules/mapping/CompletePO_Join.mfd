@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2017r3 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="30">
+	<resources/>
+	<component name="defaultmap1" uid="49431880" editable="1">
+		<properties XSLTTargetEncoding="UTF-8" SelectedLanguage="builtin" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="join" library="core" uid="52858582" kind="32">
+					<properties/>
+					<view ltx="331" lty="32" rbx="470" rby="118"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="document" ns="1" expanded="1">
+								<entry name="tuple" ns="1" expanded="1">
+									<entry name="dynamic_tree_node0" ns="1" expanded="1">
+										<entry name="CustomerNr" inpkey="70"/>
+									</entry>
+									<entry name="dynamic_tree_node1" ns="1" expanded="1">
+										<entry name="Customer" inpkey="71" outkey="72">
+											<entry name="Address" expanded="1"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<join>
+							<joinkeys>
+								<keypair>
+									<first-key path-id="1"/>
+									<second-key path-id="2"/>
+								</keypair>
+							</joinkeys>
+							<keypaths>
+								<header>
+									<namespaces>
+										<namespace/>
+									</namespaces>
+								</header>
+								<entry outkey="1">
+									<condition/>
+									<entry name="Number" outkey="2">
+										<condition/>
+									</entry>
+								</entry>
+							</keypaths>
+						</join>
+					</data>
+				</component>
+				<component name="Customers" library="xml" uid="52858576" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view lty="152" rbx="152" rby="338"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Customers" expanded="1">
+										<entry name="Customer" outkey="1" expanded="1">
+											<entry name="Address" expanded="1"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Customers.xsd" inputinstance="Customers.xml" instanceroot="{}Customers"/>
+					</data>
+				</component>
+				<component name="Articles" library="xml" uid="49427664" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view lty="372" rbx="152" rby="481"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Articles" expanded="1">
+										<entry name="Article" outkey="10" expanded="1"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Articles.xsd" inputinstance="Articles.xml" instanceroot="{}Articles"/>
+					</data>
+				</component>
+				<component name="sum" library="core" uid="52858577" kind="5">
+					<properties/>
+					<sources>
+						<datapoint/>
+						<datapoint pos="1" key="22"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="482" lty="392" rbx="603" rby="446"/>
+				</component>
+				<component name="count" library="core" uid="52858578" kind="5">
+					<properties/>
+					<sources>
+						<datapoint/>
+						<datapoint pos="1" key="46"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="18"/>
+					</targets>
+					<view ltx="482" lty="460" rbx="603" rby="514"/>
+				</component>
+				<component name="ShortPO" library="xml" uid="52293320" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view rbx="152" rby="118"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="ShortPO" expanded="1">
+										<entry name="CustomerNr" outkey="32"/>
+										<entry name="LineItems" outkey="64" expanded="1">
+											<entry name="LineItem" outkey="67" expanded="1"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="ShortPO.xsd" inputinstance="ShortPO.xml" instanceroot="{}ShortPO"/>
+					</data>
+				</component>
+				<component name="CompletePO" library="xml" uid="52496680" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="636" lty="53" rbx="818" rby="438"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="CompletePO" expanded="1">
+										<entry name="Customer" inpkey="30" expanded="1">
+											<entry name="Address" expanded="1"/>
+										</entry>
+										<entry name="LineItems" inpkey="65" expanded="1">
+											<entry name="LineItem" inpkey="68" expanded="1">
+												<entry name="Article" inpkey="44" expanded="1">
+													<entry name="Number" inpkey="14"/>
+													<entry name="Name" inpkey="62"/>
+													<entry name="SinglePrice" inpkey="57"/>
+													<entry name="Amount" inpkey="49"/>
+													<entry name="Price" inpkey="27"/>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="Total" expanded="1">
+											<entry name="TotalSum" inpkey="8"/>
+											<entry name="TotalItems" inpkey="19"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="CompletePO.xsd" instanceroot="{}CompletePO" sps="CompletePO.sps"/>
+					</data>
+				</component>
+				<component name="multiply" library="core" uid="49499840" kind="5" growable="1" growablebasename="value">
+					<sources>
+						<datapoint pos="0" key="51"/>
+						<datapoint pos="1" key="59"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="24"/>
+					</targets>
+					<view ltx="412" lty="212" rbx="490" rby="268"/>
+				</component>
+				<component name="join" library="core" uid="52858583" kind="32">
+					<properties/>
+					<view ltx="215" lty="238" rbx="353" rby="413"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="document" ns="1" expanded="1">
+								<entry name="tuple" ns="1" expanded="1">
+									<entry name="dynamic_tree_node0" ns="1" expanded="1">
+										<entry name="LineItem" inpkey="73" outkey="94" expanded="1">
+											<entry name="Amount" outkey="74"/>
+										</entry>
+									</entry>
+									<entry name="dynamic_tree_node1" ns="1" expanded="1">
+										<entry name="Article" inpkey="75" outkey="76" expanded="1">
+											<entry name="Number" outkey="77"/>
+											<entry name="Name" outkey="78"/>
+											<entry name="SinglePrice" outkey="79"/>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<join>
+							<joinkeys>
+								<keypair>
+									<first-key path-id="1"/>
+									<second-key path-id="2"/>
+								</keypair>
+							</joinkeys>
+							<keypaths>
+								<header>
+									<namespaces>
+										<namespace/>
+									</namespaces>
+								</header>
+								<entry>
+									<condition/>
+									<entry name="ArticleNr" outkey="1">
+										<condition/>
+									</entry>
+									<entry name="Number" outkey="2">
+										<condition/>
+									</entry>
+								</entry>
+							</keypaths>
+						</join>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges>
+					<edge edgekey="80">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="81">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="82">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="83">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+					<edge edgekey="84">
+						<data>
+							<dataconnection type="2"/>
+						</data>
+					</edge>
+				</edges>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="71" edgekey="81"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="8" edgekey="9"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="75" edgekey="84"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="19" edgekey="20"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="27" edgekey="28"/>
+							<edge vertexkey="22" edgekey="85"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="32">
+						<edges>
+							<edge vertexkey="70" edgekey="83"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="64">
+						<edges>
+							<edge vertexkey="65" edgekey="66"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="67">
+						<edges>
+							<edge vertexkey="73" edgekey="82"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="72">
+						<edges>
+							<edge vertexkey="30" edgekey="80"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="74">
+						<edges>
+							<edge vertexkey="51" edgekey="86"/>
+							<edge vertexkey="49" edgekey="87"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="76">
+						<edges>
+							<edge vertexkey="46" edgekey="88"/>
+							<edge vertexkey="44" edgekey="89"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="77">
+						<edges>
+							<edge vertexkey="14" edgekey="90"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="78">
+						<edges>
+							<edge vertexkey="62" edgekey="91"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="79">
+						<edges>
+							<edge vertexkey="57" edgekey="92"/>
+							<edge vertexkey="59" edgekey="93"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="94">
+						<edges>
+							<edge vertexkey="68" edgekey="95"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
