@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="17">
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="java" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="parseDateTime" library="user" blackbox="0" uid="19" kind="19" visible="0">
+					<view ltx="495" lty="164" rbx="657" rby="198"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="date" inpkey="37" componentid="15"/>
+							<entry name="time" inpkey="39" componentid="16"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="resultDateTime" outkey="38" componentid="17"/>
+						</root>
+					</data>
+				</component>
+				<component name="airportcode2Names" library="user" blackbox="0" uid="36" kind="19" visible="0">
+					<view ltx="495" lty="319" rbx="642" rby="336"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="airportcode" inpkey="81" componentid="32"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="name" outkey="82" componentid="33"/>
+						</root>
+					</data>
+				</component>
+				<component name="airportcode2Names" library="user" blackbox="0" uid="35" kind="19" visible="0">
+					<view ltx="495" lty="378" rbx="642" rby="395"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="airportcode" inpkey="80" componentid="32"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="name" outkey="79" componentid="33"/>
+						</root>
+					</data>
+				</component>
+				<component name="parseDateTime" library="user" blackbox="0" uid="18" kind="19" visible="0">
+					<view ltx="495" lty="71" rbx="657" rby="105"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="date" inpkey="31" componentid="15"/>
+							<entry name="time" inpkey="32" componentid="16"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="resultDateTime" outkey="33" componentid="17"/>
+						</root>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="3" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="787" lty="5" rbx="977" rby="378"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="FlightInformation" expanded="1">
+										<entry name="FlightInfo" inpkey="1" expanded="1">
+											<entry name="flightname" type="attribute" inpkey="91"/>
+											<entry name="departuredatetime" type="attribute" inpkey="2"/>
+											<entry name="arrivaldatetime" type="attribute" inpkey="40"/>
+											<entry name="daysofoperation" type="attribute" inpkey="92"/>
+											<entry name="numberofstops" type="attribute" inpkey="93"/>
+											<entry name="Station" expanded="1">
+												<entry name="airportcode" type="attribute" inpkey="27"/>
+												<entry name="name" type="attribute" inpkey="48"/>
+											</entry>
+											<entry name="Station" inpkey="58" expanded="1" clone="1">
+												<entry name="airportcode" type="attribute" inpkey="59"/>
+												<entry name="name" type="attribute" inpkey="54"/>
+											</entry>
+											<entry name="Station" inpkey="94" expanded="1" clone="1">
+												<entry name="airportcode" type="attribute" inpkey="60"/>
+												<entry name="name" type="attribute" inpkey="61"/>
+											</entry>
+											<entry name="Station" expanded="1" clone="1">
+												<entry name="airportcode" type="attribute" inpkey="28"/>
+												<entry name="name" type="attribute" inpkey="51"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="FlightInformation.xsd" instanceroot="{}FlightInformation" sps="FlightInfo.sps"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="airportcode2Names" library="user" blackbox="0" uid="34" kind="19" visible="0">
+					<view ltx="496" lty="436" rbx="643" rby="453"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="airportcode" inpkey="75" componentid="32"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="name" outkey="76" componentid="33"/>
+						</root>
+					</data>
+				</component>
+				<component name="edi" library="text" uid="2" kind="16">
+					<properties/>
+					<view rbx="374" rby="537"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Envelope" expanded="1">
+										<entry name="Interchange" expanded="1">
+											<entry name="Group" expanded="1">
+												<entry name="Message_FLIRES" expanded="1">
+													<entry name="IFT">
+														<entry name="C346" expanded="1"/>
+													</entry>
+													<entry name="SG1">
+														<entry name="ERC" expanded="1">
+															<entry name="C901" expanded="1"/>
+														</entry>
+													</entry>
+													<entry name="SG2" expanded="1">
+														<entry name="TVL" outkey="14" expanded="1">
+															<entry name="C310">
+																<entry name="F9916" outkey="15"/>
+																<entry name="F9918" outkey="16"/>
+																<entry name="F9920" outkey="41"/>
+																<entry name="F9922" outkey="42"/>
+															</entry>
+															<entry name="C328_1" expanded="1">
+																<entry name="F3224" outkey="25"/>
+															</entry>
+															<entry name="C328_2" expanded="1">
+																<entry name="F3224" outkey="26"/>
+															</entry>
+															<entry name="C308" expanded="1">
+																<entry name="F9908" outkey="95"/>
+															</entry>
+														</entry>
+														<entry name="APD" expanded="1">
+															<entry name="C314" expanded="1">
+																<entry name="F9924" outkey="96"/>
+																<entry name="F9928" outkey="97"/>
+															</entry>
+															<entry name="C348_1" outkey="62" expanded="1">
+																<entry name="F3223" outkey="55"/>
+															</entry>
+															<entry name="C348_2" outkey="98" expanded="1">
+																<entry name="F3223" outkey="63"/>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="edi" kind="EDIFACT" inputinstance="IATA.edi" encoding="1" byteorder="1" byteordermark="0" config="IATA\Envelope.Config">
+							<messages>
+								<message type="FLIRES"/>
+							</messages>
+							<settings unpackedformat="false" autocompletedata="true" terminatewithlinefeed="true" syntaxversionnumber="4" controllingagency="IATA" syntaxlevel="A" writeuna="true">
+								<separators dataelement="+" component=":" subcomponent="" segment="&apos;" decimal="." escape="?" repetition="*"/>
+								<validation>
+									<case kind="missing-segment" action="stop"/>
+									<case kind="missing-group" action="stop"/>
+									<case kind="missing-field-or-composite" action="report+reject"/>
+									<case kind="extra-data" action="report+reject"/>
+									<case kind="invalid-field-value" action="report+reject"/>
+									<case kind="invalid-date" action="report+reject"/>
+									<case kind="invalid-time" action="report+reject"/>
+									<case kind="extra-repeat" action="report+reject"/>
+									<case kind="numeric-overflow" action="report+reject"/>
+									<case kind="data-element-too-short" action="report+reject"/>
+									<case kind="data-element-too-long" action="report+reject"/>
+									<case kind="unexpected-eof" action="stop"/>
+									<case kind="invalid-codelist-value" action="report+reject"/>
+									<case kind="semantic" action="report+reject"/>
+									<case kind="segment-not-in-message" action="stop"/>
+									<case kind="unrecognized-segment-id" action="stop"/>
+								</validation>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="airportcode2Names" library="user" blackbox="0" uid="37" kind="19" visible="0">
+					<view ltx="495" lty="256" rbx="642" rby="273"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="airportcode" inpkey="84" componentid="32"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="name" outkey="83" componentid="33"/>
+						</root>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="1" edgekey="22"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="31" edgekey="34"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="32" edgekey="35"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="27" edgekey="29"/>
+							<edge vertexkey="84" edgekey="85"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="26">
+						<edges>
+							<edge vertexkey="28" edgekey="30"/>
+							<edge vertexkey="75" edgekey="77"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="33">
+						<edges>
+							<edge vertexkey="2" edgekey="36"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="38">
+						<edges>
+							<edge vertexkey="40" edgekey="43"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="41">
+						<edges>
+							<edge vertexkey="37" edgekey="44"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="42">
+						<edges>
+							<edge vertexkey="39" edgekey="45"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="55">
+						<edges>
+							<edge vertexkey="59" edgekey="70"/>
+							<edge vertexkey="81" edgekey="86"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="62">
+						<edges>
+							<edge vertexkey="58" edgekey="72"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="63">
+						<edges>
+							<edge vertexkey="60" edgekey="74"/>
+							<edge vertexkey="80" edgekey="87"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="76">
+						<edges>
+							<edge vertexkey="51" edgekey="78"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="79">
+						<edges>
+							<edge vertexkey="61" edgekey="88"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82">
+						<edges>
+							<edge vertexkey="54" edgekey="89"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="83">
+						<edges>
+							<edge vertexkey="48" edgekey="90"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="95">
+						<edges>
+							<edge vertexkey="91" edgekey="99"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="96">
+						<edges>
+							<edge vertexkey="93" edgekey="100"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="97">
+						<edges>
+							<edge vertexkey="92" edgekey="101"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="98">
+						<edges>
+							<edge vertexkey="94" edgekey="102"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="parseDateTime" library="user" blackbox="0" uid="9" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="parse-date" library="core" uid="12" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="11"/>
+						<datapoint pos="1" key="6"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="481" rbx="561" rby="56"/>
+				</component>
+				<component name="parse-time" library="core" uid="13" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="10"/>
+						<datapoint pos="1" key="4"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="7"/>
+					</targets>
+					<view ltx="481" lty="79" rbx="559" rby="135"/>
+				</component>
+				<component name="resultDateTime" library="core" uid="17" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="14"/>
+					</sources>
+					<view ltx="1020" rbx="1119" rby="39"/>
+					<data>
+						<output datatype="dateTime"/>
+						<wsdl/>
+						<parameter usageKind="output" name="resultDateTime"/>
+					</data>
+				</component>
+				<component name="date" library="core" uid="15" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="12"/>
+					</targets>
+					<view rbx="70" rby="39"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="date"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="10" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="5"/>
+					</targets>
+					<view ltx="288" lty="38" rbx="431" rby="56"/>
+					<data>
+						<constant value="[Y,4-4][M,2-2][D,2-2]" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="23" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="22"/>
+					</targets>
+					<view ltx="134" lty="206" rbx="180" rby="224"/>
+					<data>
+						<constant value="4" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="datetime-from-date-and-time" library="lang" uid="14" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="2"/>
+						<datapoint pos="1" key="8"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="9"/>
+					</targets>
+					<view ltx="607" lty="18" rbx="770" rby="74"/>
+				</component>
+				<component name="constant" library="core" uid="11" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="3"/>
+					</targets>
+					<view ltx="183" lty="223" rbx="288" rby="241"/>
+					<data>
+						<constant value="[H,2-2][m,2-2]" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="22" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="23"/>
+						<datapoint pos="1" key="24"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="25"/>
+					</targets>
+					<view ltx="218" lty="115" rbx="271" rby="171"/>
+				</component>
+				<component name="constant" library="core" uid="25" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="26"/>
+					</targets>
+					<view ltx="183" lty="260" rbx="288" rby="278"/>
+					<data>
+						<constant value="[H,1-1][m,2-2]" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="time" library="core" uid="16" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="13"/>
+					</targets>
+					<view lty="50" rbx="68" rby="89"/>
+					<data>
+						<input datatype="decimal"/>
+						<wsdl/>
+						<parameter usageKind="input" name="time"/>
+					</data>
+				</component>
+				<component name="string-length" library="core" uid="24" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="27"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="28"/>
+					</targets>
+					<view ltx="94" lty="88" rbx="181" rby="127"/>
+				</component>
+				<component name="if-else" library="core" uid="21" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="29"/>
+						<datapoint pos="1" key="30"/>
+						<datapoint pos="2" key="31"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="32"/>
+					</targets>
+					<view ltx="342" lty="115" rbx="439" rby="191"/>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="2" edgekey="15"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="3">
+						<edges>
+							<edge vertexkey="30" edgekey="33"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="5">
+						<edges>
+							<edge vertexkey="6" edgekey="17"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="7">
+						<edges>
+							<edge vertexkey="8" edgekey="18"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="9">
+						<edges>
+							<edge vertexkey="14" edgekey="19"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="12">
+						<edges>
+							<edge vertexkey="11" edgekey="20"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="10" edgekey="21"/>
+							<edge vertexkey="27" edgekey="34"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="24" edgekey="35"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="29" edgekey="36"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="26">
+						<edges>
+							<edge vertexkey="31" edgekey="37"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="23" edgekey="38"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="32">
+						<edges>
+							<edge vertexkey="4" edgekey="39"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="airportcode2Names" library="user" blackbox="0" uid="30" editable="1" inline="1">
+		<properties/>
+		<structure>
+			<children>
+				<component name="name" library="core" uid="33" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="4"/>
+					</sources>
+					<view ltx="577" rbx="631" rby="39"/>
+					<data>
+						<output datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="output" name="name"/>
+					</data>
+				</component>
+				<component name="airportcode" library="core" uid="32" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="3"/>
+					</targets>
+					<view rbx="104" rby="39"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="airportcode"/>
+					</data>
+				</component>
+				<component name="value-map" library="core" uid="31" kind="23">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="2"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="250" rbx="327" rby="39"/>
+					<data>
+						<wsdl/>
+						<valuemap enableDefaultValue="1">
+							<valuemapTable>
+								<entry from="JFK" to="John F. Kennedy International Airport New York"/>
+								<entry from="VIE" to="Vienna International Airport"/>
+								<entry from="YVR" to="Vancouver International Airport"/>
+								<entry from="YYZ" to="Lester B. Pearson International Airport"/>
+								<entry from="MUC" to="Franz Josef Strauss Airport"/>
+								<entry from="HND" to="Tokyo Haneda International Airport"/>
+								<entry from="PEK" to="Beijing Capital International Airport"/>
+								<entry from="BOS" to="Boston Logan International Airport"/>
+							</valuemapTable>
+							<input name="input" type="string"/>
+							<result name="result" type="string"/>
+						</valuemap>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="4" edgekey="5"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="3">
+						<edges>
+							<edge vertexkey="2" edgekey="6"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

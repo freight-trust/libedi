@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="22">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="25" editable="1">
+		<properties SelectedLanguage="java" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="item-at" library="core" uid="66" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="267"/>
+						<datapoint pos="1" key="268"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="269"/>
+					</targets>
+					<view ltx="445" lty="200" rbx="547" rby="256"/>
+				</component>
+				<component name="Revenues" library="text" uid="84" kind="16">
+					<properties XSLTDefaultOutput="1"/>
+					<view ltx="748" lty="6" rbx="917" rby="135"/>
+					<data>
+						<root>
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Rows" inpkey="342" expanded="1">
+										<entry name="Region" inpkey="343"/>
+										<entry name="Passenger tickets" inpkey="344"/>
+										<entry name="Onboard and other" inpkey="345"/>
+										<entry name="Tour and other" inpkey="346"/>
+										<entry name="Revenues" inpkey="347"/>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="csv" encoding="1000" byteorder="1" byteordermark="0">
+							<settings separator="," quote="&quot;" firstrownames="true" removeempty="true">
+								<names root="Text file" block="Rows">
+									<field0 name="Region" type="string"/>
+									<field1 name="Passenger tickets" type="decimal"/>
+									<field2 name="Onboard and other" type="decimal"/>
+									<field3 name="Tour and other" type="decimal"/>
+									<field4 name="Revenues" type="decimal"/>
+								</names>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="item-at" library="core" uid="73" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="275"/>
+						<datapoint pos="1" key="273"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="274"/>
+					</targets>
+					<view ltx="445" lty="267" rbx="547" rby="323"/>
+				</component>
+				<component name="item-at" library="core" uid="74" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="278"/>
+						<datapoint pos="1" key="276"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="277"/>
+					</targets>
+					<view ltx="445" lty="336" rbx="547" rby="392"/>
+				</component>
+				<component name="item-at" library="core" uid="75" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="280"/>
+						<datapoint pos="1" key="279"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="281"/>
+					</targets>
+					<view ltx="445" lty="404" rbx="547" rby="460"/>
+				</component>
+				<component name="Cells" library="core" uid="79" kind="3">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="313"/>
+						<datapoint pos="1" key="314"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="325"/>
+						<datapoint/>
+					</targets>
+					<view ltx="546" lty="6" rbx="649" rby="62"/>
+				</component>
+				<component name="ValuesByRegion" library="xlsx" uid="1" kind="26">
+					<properties/>
+					<view ltx="24" rbx="229" rby="359"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Workbook" expanded="1">
+										<entry name="Worksheet" expanded="1" displayselectionmode="selection">
+											<ranges/>
+											<entry name="Row" expanded="1">
+												<entry name="Cell" datatype="string"/>
+											</entry>
+										</entry>
+										<entry name="Worksheet" expanded="1">
+											<condition>
+												<expression>
+													<function name="equal-ignorecase" library="xlsx">
+														<expression>
+															<attribute name="Name"/>
+														</expression>
+														<expression>
+															<constant value="Revenues"/>
+														</expression>
+													</function>
+												</expression>
+											</condition>
+											<ranges>
+												<range id="1" start="1" count="1"/>
+												<range id="2" start="2" count="1"/>
+												<range id="3" start="3" count="1"/>
+												<range id="4" start="4" count="1"/>
+												<range id="5" start="5" count="1"/>
+											</ranges>
+											<entry name="Row" expanded="1" displayselectionmode="selection">
+												<entry name="Cell" datatype="string"/>
+											</entry>
+											<entry name="Row" expanded="1">
+												<condition>
+													<expression>
+														<function name="is-range-id">
+															<expression>
+																<constant value="1" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="Cell" outkey="283" expanded="1" datatype="string">
+													<entry name="n" type="attribute" outkey="330"/>
+												</entry>
+											</entry>
+											<entry name="Row" expanded="1">
+												<condition>
+													<expression>
+														<function name="is-range-id">
+															<expression>
+																<constant value="2" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="Cell" outkey="272" datatype="string"/>
+											</entry>
+											<entry name="Row" expanded="1">
+												<condition>
+													<expression>
+														<function name="is-range-id">
+															<expression>
+																<constant value="3" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="Cell" outkey="284" datatype="string"/>
+											</entry>
+											<entry name="Row" expanded="1">
+												<condition>
+													<expression>
+														<function name="is-range-id">
+															<expression>
+																<constant value="4" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="Cell" outkey="285" datatype="string"/>
+											</entry>
+											<entry name="Row" expanded="1">
+												<condition>
+													<expression>
+														<function name="is-range-id">
+															<expression>
+																<constant value="5" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="Cell" outkey="286" datatype="string"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<excel inputinstance="ValuesByRegion.xlsx"/>
+					</data>
+				</component>
+				<component name="not-equal" library="core" uid="83" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="322"/>
+						<datapoint pos="1" key="323"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="324"/>
+					</targets>
+					<view ltx="445" lty="102" rbx="517" rby="158"/>
+				</component>
+				<component name="constant" library="core" uid="78" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="289"/>
+					</targets>
+					<view ltx="381" lty="140" rbx="419" rby="158"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="269">
+						<edges>
+							<edge vertexkey="344" edgekey="348"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="272">
+						<edges>
+							<edge vertexkey="267" edgekey="298"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="274">
+						<edges>
+							<edge vertexkey="345" edgekey="349"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="277">
+						<edges>
+							<edge vertexkey="346" edgekey="350"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="281">
+						<edges>
+							<edge vertexkey="347" edgekey="351"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="283">
+						<edges>
+							<edge vertexkey="313" edgekey="318"/>
+							<edge vertexkey="343" edgekey="352"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="284">
+						<edges>
+							<edge vertexkey="275" edgekey="305"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="285">
+						<edges>
+							<edge vertexkey="278" edgekey="306"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="286">
+						<edges>
+							<edge vertexkey="280" edgekey="307"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="289">
+						<edges>
+							<edge vertexkey="323" edgekey="354"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="324">
+						<edges>
+							<edge vertexkey="314" edgekey="328"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="325">
+						<edges>
+							<edge vertexkey="342" edgekey="353"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="330">
+						<edges>
+							<edge vertexkey="268" edgekey="337"/>
+							<edge vertexkey="273" edgekey="338"/>
+							<edge vertexkey="276" edgekey="339"/>
+							<edge vertexkey="279" edgekey="340"/>
+							<edge vertexkey="322" edgekey="355"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with Altova MapForce 2020 -->
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="34">
+	<resources/>
+	<component name="defaultmap" uid="1">
+		<properties SelectedLanguage="builtin" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="constant" library="core" uid="115" kind="2">
+					<targets>
+						<datapoint pos="0" key="208"/>
+					</targets>
+					<view ltx="224" lty="85" rbx="269" rby="102"/>
+					<data>
+						<constant value="," datatype="string"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="113" kind="2">
+					<targets>
+						<datapoint pos="0" key="211"/>
+					</targets>
+					<view ltx="20" lty="34" rbx="102" rby="51"/>
+					<data>
+						<constant value="USD,JPY" datatype="string"/>
+					</data>
+				</component>
+				<component name="equal" library="core" uid="118" kind="5">
+					<sources>
+						<datapoint pos="0" key="203"/>
+						<datapoint pos="1" key="205"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="204"/>
+					</targets>
+					<view ltx="445" lty="258" rbx="501" rby="312"/>
+				</component>
+				<component name="tokenize" library="core" uid="114" kind="5">
+					<sources>
+						<datapoint pos="0" key="212"/>
+						<datapoint pos="1" key="213"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="214"/>
+					</targets>
+					<view ltx="320" lty="63" rbx="414" rby="117"/>
+				</component>
+				<component name="constant" library="core" uid="95" kind="2">
+					<targets>
+						<datapoint pos="0" key="174"/>
+					</targets>
+					<view ltx="526" lty="121" rbx="589" rby="138"/>
+					<data>
+						<constant value="EUR" datatype="string"/>
+					</data>
+				</component>
+				<component name="Currencies" library="core" uid="116" kind="6">
+					<sources>
+						<datapoint pos="0" key="209"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="210"/>
+					</targets>
+					<view ltx="158" lty="13" rbx="269" rby="51"/>
+					<data>
+						<input datatype="string"/>
+						<parameter usageKind="input" name="Currencies" optional="1"/>
+					</data>
+				</component>
+				<component name="ExchangeRates" library="json" uid="90" kind="31">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="684" lty="121" rbx="869" rby="384"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" expanded="1">
+										<entry name="item" type="json-item" inpkey="148" expanded="1">
+											<entry name="object" inpkey="147" expanded="1">
+												<entry name="base" type="json-property" expanded="1">
+													<entry name="string" inpkey="135"/>
+												</entry>
+												<entry name="date" type="json-property" expanded="1">
+													<entry name="string" inpkey="142"/>
+												</entry>
+												<entry name="rates" type="json-property" expanded="1">
+													<entry name="object" expanded="1">
+														<entry name="property" ns="1" type="json-property" inpkey="215" expanded="1">
+															<entry name="name" ns="1" type="json-propertyname" inpkey="216"/>
+															<entry name="number" inpkey="217"/>
+															<entry name="array">
+																<entry name="item" type="json-item" expanded="1"/>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+												<entry name="property" ns="1" type="json-property">
+													<entry name="array">
+														<entry name="item" type="json-item" expanded="1"/>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<json schema="ExchangeRates.schema.json" jsonlines="1"/>
+					</data>
+				</component>
+				<component name="eurofxref-hist" library="xml" uid="78" kind="14">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="20" lty="137" rbx="259" rby="337"/>
+					<data>
+						<root>
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.ecb.int/vocabulary/2002-08-01/eurofxref"/>
+									<namespace uid="http://www.gesmes.org/xml/2002-08-01"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="3" expanded="1">
+								<entry name="document" ns="3" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Envelope" ns="2" expanded="1">
+										<entry name="Cube" ns="1" outkey="178" expanded="1">
+											<entry name="Cube" ns="1" outkey="179" expanded="1">
+												<entry name="time" type="attribute" outkey="180"/>
+												<entry name="Cube" ns="1" expanded="1">
+													<entry name="currency" type="attribute" outkey="206"/>
+													<entry name="rate" type="attribute" outkey="207"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="eurofxref-hist.xsd" inputinstance="https://www.ecb.europa.eu/stats/eurofxref/eurofxref-hist-90d.xml" instanceroot="{http://www.gesmes.org/xml/2002-08-01}Envelope"/>
+					</data>
+				</component>
+				<component name="rate" library="core" uid="117" kind="3">
+					<sources>
+						<datapoint pos="0" key="200"/>
+						<datapoint pos="1" key="201"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="202"/>
+						<datapoint/>
+					</targets>
+					<view ltx="526" lty="306" rbx="639" rby="360"/>
+				</component>
+			</children>
+		</structure>
+		<connections>
+			<edge from="174" to="135"/>
+			<edge from="180" to="142"/>
+			<edge from="179" to="147"/>
+			<edge from="178" to="148"/>
+			<edge from="207" to="200"/>
+			<edge from="204" to="201"/>
+			<edge from="206" to="203"/>
+			<edge from="214" to="205"/>
+			<edge from="211" to="209"/>
+			<edge from="210" to="212"/>
+			<edge from="208" to="213"/>
+			<edge from="214" to="215"/>
+			<edge from="214" to="216"/>
+			<edge from="202" to="217"/>
+		</connections>
+	</component>
+</mapping>
