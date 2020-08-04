@@ -1,7 +1,6 @@
 #!/bin/bash -e
 FILES=*.json
-for f in "$FILES"
-do
+for f in "$FILES"; do
   # extension="${f##*.}"
   filename="${f%.*}"
   echo "Converting $f to $filename.dhall"
