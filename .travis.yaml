@@ -1,28 +1,11 @@
 language: node_js
-
-node_js:
-  - 'node'
-  - '12'
-  - '10'
-
 env:
-  - workerCount=3 timeout=600000
-
-matrix:
-  fast_finish: true
-
-branches:
-  only:
-  - master
-  - /^release-.*/
-
-install:
-  - npm uninstall typescript --no-save
-  - npm install
-
-cache:
-  directories:
-    - node_modules
-
-git:
-  depth: 1
+  - TYPESCRIPT_VERSION=3.5
+  - TYPESCRIPT_VERSION=3.6
+  - TYPESCRIPT_VERSION=3.7
+node_js:
+  - "11"
+script:
+  - yarn add typescript@$TYPESCRIPT_VERSION
+  - yarn lint
+  - yarn test
