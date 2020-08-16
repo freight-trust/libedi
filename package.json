@@ -1,0 +1,33 @@
+{
+  "name": "@fr8/libedi",
+  "version": "1.0.0",
+  "description": "library for EDI Transactions and Schemas",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freight-trust/libedi.git"
+  },
+  "keywords": [
+    "edi",
+    "x12",
+    "edifact",
+    "logistics",
+    "supply",
+    "chain"
+  ],
+  "author": "SEE LICENSE",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/freight-trust/libedi/issues"
+  },
+  "homepage": "https://github.com/freight-trust/libedi#readme",
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^1.1.4"
+  }
+}
