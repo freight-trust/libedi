@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="25">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="builtin" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="ipos" library="json" uid="2" kind="31">
+					<properties XSLTTargetEncoding="UTF-8"/>
+					<view ltx="2" rbx="293" rby="533"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" expanded="1">
+										<entry name="object" expanded="1">
+											<entry name="Customer" type="json-property" expanded="1">
+												<entry name="string" outkey="220"/>
+											</entry>
+											<entry name="PurchaseOrders" type="json-property" expanded="1">
+												<entry name="array" expanded="1">
+													<entry name="item" type="json-item" expanded="1">
+														<entry name="object" outkey="157" expanded="1">
+															<entry name="orderDate" type="json-property" expanded="1">
+																<entry name="string" outkey="158"/>
+															</entry>
+															<entry name="shipTo" type="json-property" expanded="1">
+																<entry name="object" expanded="1">
+																	<entry name="oneOf0" type="json-subtype" outkey="159" expanded="1">
+																		<entry name="name" type="json-property" expanded="1">
+																			<entry name="string" outkey="160"/>
+																		</entry>
+																		<entry name="street" type="json-property" expanded="1">
+																			<entry name="string" outkey="161"/>
+																		</entry>
+																		<entry name="city" type="json-property" expanded="1">
+																			<entry name="string" outkey="162"/>
+																		</entry>
+																		<entry name="postcode" type="json-property" expanded="1">
+																			<entry name="number" outkey="163"/>
+																		</entry>
+																	</entry>
+																	<entry name="oneOf1" type="json-subtype" outkey="164" expanded="1">
+																		<entry name="name" type="json-property" expanded="1">
+																			<entry name="string" outkey="165"/>
+																		</entry>
+																		<entry name="street" type="json-property" expanded="1">
+																			<entry name="string" outkey="166"/>
+																		</entry>
+																		<entry name="city" type="json-property" expanded="1">
+																			<entry name="string" outkey="167"/>
+																		</entry>
+																		<entry name="state" type="json-property" expanded="1">
+																			<entry name="string" outkey="168"/>
+																		</entry>
+																		<entry name="zip" type="json-property" expanded="1">
+																			<entry name="number" outkey="169"/>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+															<entry name="billTo" type="json-property" expanded="1">
+																<entry name="object" expanded="1">
+																	<entry name="oneOf0" type="json-subtype" outkey="170">
+																		<entry name="name" type="json-property" expanded="1">
+																			<entry name="string" outkey="171"/>
+																		</entry>
+																		<entry name="street" type="json-property" expanded="1">
+																			<entry name="string" outkey="172"/>
+																		</entry>
+																		<entry name="city" type="json-property" expanded="1">
+																			<entry name="string" outkey="173"/>
+																		</entry>
+																		<entry name="postcode" type="json-property" expanded="1">
+																			<entry name="number" outkey="174"/>
+																		</entry>
+																	</entry>
+																	<entry name="oneOf1" type="json-subtype" outkey="175">
+																		<entry name="name" type="json-property" expanded="1">
+																			<entry name="string" outkey="176"/>
+																		</entry>
+																		<entry name="street" type="json-property" expanded="1">
+																			<entry name="string" outkey="177"/>
+																		</entry>
+																		<entry name="city" type="json-property" expanded="1">
+																			<entry name="string" outkey="178"/>
+																		</entry>
+																		<entry name="state" type="json-property" expanded="1">
+																			<entry name="string" outkey="179"/>
+																		</entry>
+																		<entry name="zip" type="json-property" expanded="1">
+																			<entry name="number" outkey="180"/>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+															<entry name="items" type="json-property" expanded="1">
+																<entry name="object" expanded="1">
+																	<entry name="item" type="json-property" expanded="1">
+																		<entry name="array" expanded="1">
+																			<entry name="item" type="json-item" expanded="1">
+																				<entry name="object" outkey="181" expanded="1">
+																					<entry name="partNum" type="json-property" expanded="1">
+																						<entry name="string" outkey="182"/>
+																					</entry>
+																					<entry name="productName" type="json-property" expanded="1">
+																						<entry name="string" outkey="183"/>
+																					</entry>
+																					<entry name="quantity" type="json-property" expanded="1">
+																						<entry name="number" outkey="184"/>
+																					</entry>
+																					<entry name="price" type="json-property" expanded="1">
+																						<entry name="number" outkey="185"/>
+																					</entry>
+																					<entry name="comment" type="json-property" expanded="1">
+																						<entry name="string" outkey="186"/>
+																					</entry>
+																					<entry name="shipDate" type="json-property" expanded="1">
+																						<entry name="string" outkey="187"/>
+																					</entry>
+																				</entry>
+																			</entry>
+																		</entry>
+																	</entry>
+																</entry>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<json schema="ipos.schema.json" inputinstance="ipos.json"/>
+					</data>
+				</component>
+				<component name="ipos" library="xml" uid="4" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1" TnsPrefix="ipo"/>
+					<view ltx="522" rbx="827" rby="533"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/IPO"/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="2" expanded="1">
+								<entry name="document" ns="2" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="purchaseOrders" ns="1" expanded="1">
+										<entry name="customer" type="attribute" inpkey="219"/>
+										<entry name="purchaseOrder" ns="1" inpkey="95" expanded="1">
+											<entry name="orderDate" type="attribute" inpkey="96"/>
+											<entry name="shipTo" displayselectionmode="all"/>
+											<entry name="shipTo" inpkey="231" expanded="1">
+												<condition>
+													<expression>
+														<function name="equal" library="core">
+															<expression>
+																<attribute ns="http://www.w3.org/2001/XMLSchema-instance" name="type"/>
+															</expression>
+															<expression>
+																<constant value="{http://www.altova.com/IPO}EU-Address" datatype="QName"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="name" ns="1" inpkey="232"/>
+												<entry name="street" ns="1" inpkey="233"/>
+												<entry name="city" ns="1" inpkey="234"/>
+												<entry name="postcode" ns="1" inpkey="235"/>
+											</entry>
+											<entry name="shipTo" inpkey="102" expanded="1">
+												<condition>
+													<expression>
+														<function name="equal" library="core">
+															<expression>
+																<attribute ns="http://www.w3.org/2001/XMLSchema-instance" name="type"/>
+															</expression>
+															<expression>
+																<constant value="{http://www.altova.com/IPO}US-Address" datatype="QName"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="name" ns="1" inpkey="103"/>
+												<entry name="street" ns="1" inpkey="104"/>
+												<entry name="city" ns="1" inpkey="105"/>
+												<entry name="state" ns="1" inpkey="106"/>
+												<entry name="zip" ns="1" inpkey="107"/>
+											</entry>
+											<entry name="billTo" displayselectionmode="all"/>
+											<entry name="billTo" inpkey="108">
+												<condition>
+													<expression>
+														<function name="equal" library="core">
+															<expression>
+																<attribute ns="http://www.w3.org/2001/XMLSchema-instance" name="type"/>
+															</expression>
+															<expression>
+																<constant value="{http://www.altova.com/IPO}EU-Address" datatype="QName"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="name" ns="1" inpkey="109"/>
+												<entry name="street" ns="1" inpkey="110"/>
+												<entry name="city" ns="1" inpkey="111"/>
+												<entry name="postcode" ns="1" inpkey="112"/>
+											</entry>
+											<entry name="billTo" inpkey="113">
+												<condition>
+													<expression>
+														<function name="equal" library="core">
+															<expression>
+																<attribute ns="http://www.w3.org/2001/XMLSchema-instance" name="type"/>
+															</expression>
+															<expression>
+																<constant value="{http://www.altova.com/IPO}US-Address" datatype="QName"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="name" ns="1" inpkey="114"/>
+												<entry name="street" ns="1" inpkey="115"/>
+												<entry name="city" ns="1" inpkey="116"/>
+												<entry name="state" ns="1" inpkey="117"/>
+												<entry name="zip" ns="1" inpkey="118"/>
+											</entry>
+											<entry name="Items" expanded="1">
+												<entry name="item" inpkey="119" expanded="1">
+													<entry name="partNum" type="attribute" inpkey="120"/>
+													<entry name="productName" inpkey="121"/>
+													<entry name="quantity" inpkey="122"/>
+													<entry name="price" inpkey="123"/>
+													<entry name="comment" ns="1" inpkey="124"/>
+													<entry name="shipDate" inpkey="125"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="ipos.xsd" instanceroot="{http://www.altova.com/IPO}purchaseOrders" userdefinedschemalocation="ipos.xsd" sps="ipos.sps"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="157">
+						<edges>
+							<edge vertexkey="95" edgekey="236"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="158">
+						<edges>
+							<edge vertexkey="96" edgekey="189"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="159">
+						<edges>
+							<edge vertexkey="231" edgekey="237"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="160">
+						<edges>
+							<edge vertexkey="232" edgekey="238"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="161">
+						<edges>
+							<edge vertexkey="233" edgekey="239"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="162">
+						<edges>
+							<edge vertexkey="234" edgekey="240"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="163">
+						<edges>
+							<edge vertexkey="235" edgekey="241"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="164">
+						<edges>
+							<edge vertexkey="102" edgekey="195"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="165">
+						<edges>
+							<edge vertexkey="103" edgekey="196"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="166">
+						<edges>
+							<edge vertexkey="104" edgekey="197"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="167">
+						<edges>
+							<edge vertexkey="105" edgekey="198"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="168">
+						<edges>
+							<edge vertexkey="106" edgekey="199"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="169">
+						<edges>
+							<edge vertexkey="107" edgekey="200"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="170">
+						<edges>
+							<edge vertexkey="108" edgekey="201"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="171">
+						<edges>
+							<edge vertexkey="109" edgekey="202"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="172">
+						<edges>
+							<edge vertexkey="110" edgekey="203"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="173">
+						<edges>
+							<edge vertexkey="111" edgekey="204"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="174">
+						<edges>
+							<edge vertexkey="112" edgekey="205"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="175">
+						<edges>
+							<edge vertexkey="113" edgekey="206"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="176">
+						<edges>
+							<edge vertexkey="114" edgekey="207"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="177">
+						<edges>
+							<edge vertexkey="115" edgekey="208"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="178">
+						<edges>
+							<edge vertexkey="116" edgekey="209"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="179">
+						<edges>
+							<edge vertexkey="117" edgekey="210"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="180">
+						<edges>
+							<edge vertexkey="118" edgekey="211"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="181">
+						<edges>
+							<edge vertexkey="119" edgekey="212"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="182">
+						<edges>
+							<edge vertexkey="120" edgekey="213"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="183">
+						<edges>
+							<edge vertexkey="121" edgekey="214"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="184">
+						<edges>
+							<edge vertexkey="122" edgekey="215"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="185">
+						<edges>
+							<edge vertexkey="123" edgekey="216"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="186">
+						<edges>
+							<edge vertexkey="124" edgekey="217"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="187">
+						<edges>
+							<edge vertexkey="125" edgekey="218"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="220">
+						<edges>
+							<edge vertexkey="219" edgekey="221"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

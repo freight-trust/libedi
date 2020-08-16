@@ -1,0 +1,122 @@
+[
+  {
+    "Seg": "ST",
+    "Ref": "-01\n-02",
+    "Description": "Transaction Set Identifier Code\nTransaction Set Control Number",
+    "M": "M M",
+    "Value": "“944”",
+    "Mapped To": "System control segment"
+  },
+  {
+    "Seg": "W17",
+    "Ref": "-01\n-02\n-03\n-04",
+    "Description": "Reporting Code\nDate\nWarehouse Receipt Number\nDepositor Order Number",
+    "M": "M M M O",
+    "Value": "F",
+    "Mapped To": "DATE\nRECEIPT\nPO_NUMBER"
+  },
+  {
+    "Seg": "N1",
+    "Ref": "-01\n-02\n-03\n-04",
+    "Description": "Entity Identifier Code\nName\nIdentification Code Qualifier\nIdentification Code",
+    "M": "M C C C",
+    "Value": "ST\n91",
+    "Mapped To": "NAME\n\n\nADDRESS"
+  },
+  {
+    "Seg": "N3",
+    "Ref": "-01\n-02",
+    "Description": "Address Information\nAddress Information",
+    "M": "M O",
+    "Value": "",
+    "Mapped To": "STREET\nSTREET"
+  },
+  {
+    "Seg": "N4",
+    "Ref": "-01\n-02\n-03",
+    "Description": "City Name\nState or Province Code\nPostal Code",
+    "M": "O O O",
+    "Value": "",
+    "Mapped To": "CITY\nSTATE\nZIP"
+  },
+  {
+    "Seg": "N1",
+    "Ref": "-01\n-02\n-03\n-04",
+    "Description": "Entity Identifier Code\nName\nIdentification Code Qualifier\nIdentification Code",
+    "M": "M C C C",
+    "Value": "SF\n91",
+    "Mapped To": "NAME\n\n\nADDRESS"
+  },
+  {
+    "Seg": "N3",
+    "Ref": "-01\n-02",
+    "Description": "Address Information\nAddress Information",
+    "M": "M O",
+    "Value": "",
+    "Mapped To": "STREET\nSTREET"
+  },
+  {
+    "Seg": "N4",
+    "Ref": "-01\n-02\n-03",
+    "Description": "City Name\nState or Province Code\nPostal Code",
+    "M": "O O O",
+    "Value": "",
+    "Mapped To": "CITY\nSTATE\nZIP"
+  },
+  {
+    "Seg": "N9",
+    "Ref": "-01\n-02",
+    "Description": "Reference Identification Qualif\nReference Identification",
+    "M": "M C",
+    "Value": "CA",
+    "Mapped To": "REFERENCE"
+  },
+  {
+    "Seg": "G62",
+    "Ref": "-01\n-02",
+    "Description": "Date Qualifier\nDate",
+    "M": "C C",
+    "Value": "19",
+    "Mapped To": "DATE"
+  },
+  {
+    "Seg": "W07",
+    "Ref": "-01\n-02\n-03\n-04\n-05\n-06\n-07\n-08",
+    "Description": "Quantity Received\nUnit or Basis for Measurement\nU.P.C. Case Code\nProduct/Service ID Qualifier\nProduct/Service ID\nProduct/Service ID Qualifier\nProduct/Service ID\nWarehouse Lot Number",
+    "M": "M M C C C C C O",
+    "Value": "VN",
+    "Mapped To": "QTY_PIECE\nPRODUCT\nPRODUCT\n\n\nPRODUCT\n\n\n\n\nCONTROL"
+  },
+  {
+    "Seg": "G69",
+    "Ref": "-1",
+    "Description": "Free-form Description",
+    "M": "M",
+    "Value": "",
+    "Mapped To": "DESCRIPTION"
+  },
+  {
+    "Seg": "N9",
+    "Ref": "-01\n-02",
+    "Description": "Reference Identification Qualif\nReference Identification",
+    "M": "M C",
+    "Value": "LT",
+    "Mapped To": "CONTROL"
+  },
+  {
+    "Seg": "W14",
+    "Ref": "-1",
+    "Description": "Quantity Received",
+    "M": "M",
+    "Value": "",
+    "Mapped To": "TOTAL_PIECE"
+  },
+  {
+    "Seg": "SE",
+    "Ref": "-01\n-02",
+    "Description": "Number of Included Segments\nTransaction Set Control Number",
+    "M": "M M",
+    "Value": "",
+    "Mapped To": "Syste"
+  }
+]

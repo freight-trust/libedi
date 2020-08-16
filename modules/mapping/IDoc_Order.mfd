@@ -1,0 +1,609 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="16">
+	<component name="defaultmap1" blackbox="0" editable="1">
+		<properties SelectedLanguage="java"/>
+		<structure>
+			<children>
+				<component name="convertIDOCDate" library="user" blackbox="0" uid="25" kind="19" visible="0">
+					<view ltx="359" lty="76" rbx="502" rby="110"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="dateString" inpkey="120" componentid="24"/>
+							<entry name="timeString" inpkey="124" componentid="39"/>
+						</root>
+						<root rootindex="1">
+							<header>
+								<namespaces>
+									<namespace/>
+								</namespaces>
+							</header>
+							<entry name="result" outkey="121" componentid="23"/>
+						</root>
+					</data>
+				</component>
+				<component name="divide" library="core" uid="42" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="136"/>
+						<datapoint pos="1" key="132"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="129"/>
+					</targets>
+					<view ltx="437" lty="460" rbx="-73" rby="9"/>
+				</component>
+				<component name="constant" library="core" uid="44" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="131"/>
+					</targets>
+					<view ltx="326" lty="498" rbx="-122" rby="149"/>
+					<data>
+						<constant value="100.0" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="multiply" library="core" uid="43" kind="5" growable="1" growablebasename="value">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="128"/>
+						<datapoint pos="1" key="130"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="135"/>
+					</targets>
+					<view ltx="540" lty="430" rbx="39" rby="-44"/>
+				</component>
+				<component name="edi" library="text" uid="1" kind="16">
+					<properties/>
+					<view rbx="247" rby="493"/>
+					<data>
+						<root scrollposition="629">
+							<header>
+								<namespaces/>
+							</header>
+							<entry name="FileInstance" expanded="1">
+								<entry name="document" expanded="1">
+									<entry name="Envelope" expanded="1">
+										<entry name="E2EDK01005">
+											<entry name="BELNR" outkey="6"/>
+										</entry>
+										<entry name="E2EDK03">
+											<entry name="DATUM" outkey="80"/>
+											<entry name="UZEIT" outkey="104"/>
+										</entry>
+										<entry name="E2EDKA1003" expanded="1">
+											<entry name="LIFNR" outkey="24"/>
+											<entry name="NAME1" outkey="8"/>
+											<entry name="NAME2" outkey="118"/>
+											<entry name="STRAS" outkey="49"/>
+											<entry name="ORT01" outkey="50"/>
+											<entry name="PSTLZ" outkey="51"/>
+											<entry name="LAND1" outkey="52"/>
+										</entry>
+										<entry name="SG1" expanded="1"/>
+										<entry name="SG2" expanded="1">
+											<entry name="E2EDP01005" outkey="38" expanded="1">
+												<entry name="POSEX" outkey="10"/>
+												<entry name="MENGE" outkey="25"/>
+												<entry name="VPREI" outkey="39"/>
+												<entry name="NETWR" outkey="40"/>
+											</entry>
+											<entry name="E2EDP05002" expanded="1">
+												<entry name="MSATZ" outkey="27"/>
+											</entry>
+											<entry name="E2EDP19001">
+												<entry name="KTEXT" outkey="28"/>
+											</entry>
+											<entry name="SG3" expanded="1">
+												<entry name="E2EDPT2001" expanded="1"/>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<text type="edi" kind="EDIFIXED" inputinstance="ORDERS.idoc" encoding="1" byteorder="1" byteordermark="0" config="ORDERS01-Parseridoc.txt">
+							<settings unpackedformat="false" autocompletedata="true" terminatewithlinefeed="false" syntaxversionnumber="2" controllingagency="Fixed" syntaxlevel="A" isidoc="true">
+								<separators dataelement="%20" component="%20" subcomponent="" segment="%0A" decimal="." escape="%20" repetition="%20"/>
+								<validation>
+									<case kind="missing-segment" action="stop"/>
+									<case kind="missing-group" action="stop"/>
+									<case kind="missing-field-or-composite" action="report+reject"/>
+									<case kind="extra-data" action="report+reject"/>
+									<case kind="invalid-field-value" action="report+reject"/>
+									<case kind="invalid-date" action="report+reject"/>
+									<case kind="invalid-time" action="report+reject"/>
+									<case kind="extra-repeat" action="report+reject"/>
+									<case kind="numeric-overflow" action="report+reject"/>
+									<case kind="data-element-too-short" action="report+reject"/>
+									<case kind="data-element-too-long" action="report+reject"/>
+									<case kind="unexpected-eof" action="stop"/>
+									<case kind="invalid-codelist-value" action="report+reject"/>
+									<case kind="semantic" action="report+reject"/>
+									<case kind="segment-not-in-message" action="stop"/>
+									<case kind="unrecognized-segment-id" action="stop"/>
+								</validation>
+							</settings>
+						</text>
+					</data>
+				</component>
+				<component name="document" library="xml" uid="2" kind="14">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="623" rbx="808" rby="396"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="Order" expanded="1">
+										<entry name="Header" expanded="1">
+											<entry name="Number" inpkey="1"/>
+											<entry name="Received" inpkey="81"/>
+										</entry>
+										<entry name="Customer" expanded="1">
+											<entry name="Number" inpkey="2"/>
+											<entry name="ContactName" inpkey="3"/>
+											<entry name="CompanyName" inpkey="82"/>
+											<entry name="Address" expanded="1">
+												<entry name="Street" inpkey="45"/>
+												<entry name="City" inpkey="46"/>
+												<entry name="ZIP" inpkey="47"/>
+												<entry name="State" inpkey="48"/>
+											</entry>
+										</entry>
+										<entry name="LineItems" expanded="1">
+											<entry name="LineItem" inpkey="37" expanded="1">
+												<entry name="Article" expanded="1">
+													<entry name="Number" inpkey="5"/>
+													<entry name="Name" inpkey="19"/>
+													<entry name="SinglePrice" inpkey="20"/>
+													<entry name="Amount" inpkey="21"/>
+													<entry name="Price" inpkey="22"/>
+													<entry name="Tax" inpkey="23"/>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<document schema="Order.xsd" outputinstance="Order.xml" instanceroot="{}Order" sps="Order.sps"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="1" edgekey="11"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="8">
+						<edges>
+							<edge vertexkey="82" edgekey="83"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="5" edgekey="15"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="2" edgekey="30"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="25">
+						<edges>
+							<edge vertexkey="21" edgekey="31"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="27">
+						<edges>
+							<edge vertexkey="136" edgekey="137"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="28">
+						<edges>
+							<edge vertexkey="19" edgekey="36"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="38">
+						<edges>
+							<edge vertexkey="37" edgekey="42"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="39">
+						<edges>
+							<edge vertexkey="20" edgekey="43"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="40">
+						<edges>
+							<edge vertexkey="22" edgekey="44"/>
+							<edge vertexkey="128" edgekey="138"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="49">
+						<edges>
+							<edge vertexkey="45" edgekey="53"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="50">
+						<edges>
+							<edge vertexkey="46" edgekey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="51">
+						<edges>
+							<edge vertexkey="47" edgekey="55"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="52">
+						<edges>
+							<edge vertexkey="48" edgekey="56"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="80">
+						<edges>
+							<edge vertexkey="120" edgekey="122"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="104">
+						<edges>
+							<edge vertexkey="124" edgekey="126"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="118">
+						<edges>
+							<edge vertexkey="3" edgekey="119"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="121">
+						<edges>
+							<edge vertexkey="81" edgekey="123"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="129">
+						<edges>
+							<edge vertexkey="130" edgekey="139"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="131">
+						<edges>
+							<edge vertexkey="132" edgekey="140"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="135">
+						<edges>
+							<edge vertexkey="23" edgekey="141"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+	<component name="convertIDOCDate" library="user" blackbox="0" editable="1" inline="1">
+		<properties/>
+		<description>
+			<short>result = convertIDOCDate( string )</short>
+			<long>converts an idoc string date to a datetime datatype</long>
+		</description>
+		<structure>
+			<children>
+				<component name="result" library="core" uid="23" kind="7">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="35"/>
+					</sources>
+					<view ltx="901" lty="100"/>
+					<data>
+						<output datatype="dateTime"/>
+						<wsdl/>
+						<parameter usageKind="output" name="result"/>
+					</data>
+				</component>
+				<component name="substring" library="core" uid="28" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="9"/>
+						<datapoint pos="1" key="14"/>
+						<datapoint pos="2" key="17"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="11"/>
+					</targets>
+					<view ltx="486" lty="30" rbx="105" rby="-192"/>
+				</component>
+				<component name="substring" library="core" uid="31" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="8"/>
+						<datapoint pos="1" key="19"/>
+						<datapoint pos="2" key="2"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="20"/>
+					</targets>
+					<view ltx="486" lty="121" rbx="65" rby="-82"/>
+				</component>
+				<component name="substring" library="core" uid="33" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="7"/>
+						<datapoint pos="1" key="23"/>
+						<datapoint pos="2" key="3"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="24"/>
+					</targets>
+					<view ltx="486" lty="214" rbx="79" rby="12"/>
+				</component>
+				<component name="substring" library="core" uid="38" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="30"/>
+						<datapoint pos="1" key="32"/>
+						<datapoint pos="2" key="5"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="33"/>
+					</targets>
+					<view ltx="486" lty="425" rbx="31" rby="39"/>
+				</component>
+				<component name="constant" library="core" uid="37" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="1"/>
+					</targets>
+					<view ltx="281" lty="239" rbx="-79" rby="163"/>
+					<data>
+						<constant value="2" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="36" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="31"/>
+					</targets>
+					<view ltx="281" lty="264" rbx="-76" rby="-122"/>
+					<data>
+						<constant value="3" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="29" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="16"/>
+					</targets>
+					<view ltx="281" lty="289" rbx="-84" rby="-15"/>
+					<data>
+						<constant value="4" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="30" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="18"/>
+					</targets>
+					<view ltx="281" lty="314" rbx="-76" rby="180"/>
+					<data>
+						<constant value="5" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="32" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="22"/>
+					</targets>
+					<view ltx="281" lty="339" rbx="-80" rby="75"/>
+					<data>
+						<constant value="7" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="left-trim" library="lang" uid="26" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="26"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="6"/>
+					</targets>
+					<view ltx="281" lty="30" rbx="-115" rby="-260"/>
+				</component>
+				<component name="dateString" library="core" uid="24" kind="6">
+					<properties/>
+					<sources>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="36"/>
+					</targets>
+					<view ltx="117" lty="30" rbx="-101" rby="-110"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="dateString"/>
+					</data>
+				</component>
+				<component name="substring" library="core" uid="35" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="29"/>
+						<datapoint pos="1" key="15"/>
+						<datapoint pos="2" key="4"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="27"/>
+					</targets>
+					<view ltx="486" lty="344" rbx="30" rby="38"/>
+				</component>
+				<component name="datetime-from-parts" library="lang" uid="27" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="12"/>
+						<datapoint pos="1" key="21"/>
+						<datapoint pos="2" key="25"/>
+						<datapoint pos="3" key="28"/>
+						<datapoint pos="4" key="34"/>
+						<datapoint/>
+						<datapoint/>
+						<datapoint/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="10"/>
+					</targets>
+					<view ltx="686" lty="30" rbx="269" rby="-72"/>
+				</component>
+				<component name="constant" library="core" uid="34" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="13"/>
+					</targets>
+					<view ltx="281" lty="214" rbx="-81" rby="-61"/>
+					<data>
+						<constant value="1" datatype="decimal"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="timeString" library="core" uid="39" kind="6">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="62"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="59"/>
+					</targets>
+					<view ltx="117" lty="459" rbx="-22" rby="261"/>
+					<data>
+						<input datatype="string"/>
+						<wsdl/>
+						<parameter usageKind="input" name="timeString" optional="1"/>
+					</data>
+				</component>
+				<component name="constant" library="core" uid="40" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="63"/>
+					</targets>
+					<view ltx="20" lty="459" rbx="2" rby="12"/>
+					<data>
+						<constant value="0000" datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="1">
+						<edges>
+							<edge vertexkey="2" edgekey="37"/>
+							<edge vertexkey="3" edgekey="38"/>
+							<edge vertexkey="4" edgekey="39"/>
+							<edge vertexkey="5" edgekey="40"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="6">
+						<edges>
+							<edge vertexkey="7" edgekey="41"/>
+							<edge vertexkey="8" edgekey="42"/>
+							<edge vertexkey="9" edgekey="43"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="10">
+						<edges>
+							<edge vertexkey="35" edgekey="44"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="11">
+						<edges>
+							<edge vertexkey="12" edgekey="45"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="14" edgekey="46"/>
+							<edge vertexkey="15" edgekey="47"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="17" edgekey="48"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="18">
+						<edges>
+							<edge vertexkey="19" edgekey="49"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="20">
+						<edges>
+							<edge vertexkey="21" edgekey="50"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="22">
+						<edges>
+							<edge vertexkey="23" edgekey="51"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="24">
+						<edges>
+							<edge vertexkey="25" edgekey="52"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="27">
+						<edges>
+							<edge vertexkey="28" edgekey="53"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="31">
+						<edges>
+							<edge vertexkey="32" edgekey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="33">
+						<edges>
+							<edge vertexkey="34" edgekey="55"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="36">
+						<edges>
+							<edge vertexkey="26" edgekey="56"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="59">
+						<edges>
+							<edge vertexkey="30" edgekey="60"/>
+							<edge vertexkey="29" edgekey="61"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="63">
+						<edges>
+							<edge vertexkey="62" edgekey="64"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>

@@ -1,2 +1,7 @@
+<<<<<<< HEAD
+=======
+*.json
+*.tar.gz
+>>>>>>> 22efc13ebaeaacedd35ca478a6b7fd94fefac245
 node_modules
 .DS_Store

@@ -1,0 +1,9 @@
+---
+LoadTenderResponseMessage: 
+  type: TS990
+      TransactionSetIdentifierCode:
+        id: 990
+        paths:
+          N7: Equipment Info
+          - Optional
+          B1: StandardCarrierAlphaCode_01

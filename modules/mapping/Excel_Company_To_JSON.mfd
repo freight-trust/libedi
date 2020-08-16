@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="25">
+	<resources/>
+	<component name="defaultmap1" blackbox="0" uid="1" editable="1">
+		<properties SelectedLanguage="builtin" MakePathsAbsoluteOnGeneration="1"/>
+		<structure>
+			<children>
+				<component name="exists" library="core" uid="8" kind="5">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="29"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="30"/>
+					</targets>
+					<view ltx="486" lty="349" rbx="553" rby="388"/>
+				</component>
+				<component name="if-else" library="core" uid="6" kind="4">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="31"/>
+						<datapoint/>
+						<datapoint pos="2" key="32"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="33"/>
+					</targets>
+					<view ltx="600" lty="349" rbx="697" rby="425"/>
+				</component>
+				<component name="constant" library="core" uid="9" kind="2">
+					<properties/>
+					<targets>
+						<datapoint pos="0" key="34"/>
+					</targets>
+					<view ltx="513" lty="407" rbx="553" rby="425"/>
+					<data>
+						<constant datatype="string"/>
+						<wsdl/>
+					</data>
+				</component>
+				<component name="Nanonull Inc" library="xlsx" uid="3" kind="26">
+					<properties/>
+					<view ltx="11" lty="1" rbx="312" rby="308"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1">
+									<entry name="Workbook" expanded="1">
+										<entry name="Worksheet" expanded="1" displayselectionmode="selection">
+											<ranges/>
+											<entry name="Row" expanded="1">
+												<entry name="Cell" datatype="string"/>
+											</entry>
+										</entry>
+										<entry name="Worksheet" expanded="1">
+											<condition>
+												<expression>
+													<function name="equal-ignorecase" library="xlsx">
+														<expression>
+															<attribute name="Name"/>
+														</expression>
+														<expression>
+															<constant value="Office"/>
+														</expression>
+													</function>
+												</expression>
+											</condition>
+											<ranges>
+												<range id="1" start="1" count="1"/>
+											</ranges>
+											<entry name="Row" expanded="1" displayselectionmode="selection">
+												<entry name="Cell" datatype="string"/>
+											</entry>
+											<entry name="Row" expanded="1">
+												<condition>
+													<expression>
+														<function name="is-range-id">
+															<expression>
+																<constant value="1" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="Cell" displayselectionmode="selection" datatype="string"/>
+												<entry name="Cell" datatype="string">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="1" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="s"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" outkey="2" annotation="Company Name" datatype="string">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="2" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="s"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+											</entry>
+										</entry>
+										<entry name="Worksheet" expanded="1">
+											<condition>
+												<expression>
+													<function name="equal-ignorecase" library="xlsx">
+														<expression>
+															<attribute name="Name"/>
+														</expression>
+														<expression>
+															<constant value="Staff"/>
+														</expression>
+													</function>
+												</expression>
+											</condition>
+											<ranges>
+												<range id="1" start="1"/>
+											</ranges>
+											<entry name="Row" expanded="1" displayselectionmode="selection">
+												<entry name="Cell" datatype="string"/>
+											</entry>
+											<entry name="Row" outkey="13" expanded="1" enabletitlerow="1">
+												<condition>
+													<expression>
+														<function name="is-range-id">
+															<expression>
+																<constant value="1" datatype="long"/>
+															</expression>
+														</function>
+													</expression>
+												</condition>
+												<entry name="Cell" displayselectionmode="selection" datatype="string"/>
+												<entry name="Cell" outkey="14" annotation="First" datatype="string">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="1" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="s"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" outkey="15" annotation="Last" datatype="string">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="2" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="s"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" annotation="Title" datatype="string">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="3" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="s"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" outkey="16" annotation="Phone Ext." datatype="double">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="4" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="n"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" annotation="E-mail" datatype="string">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="5" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="s"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" outkey="43" annotation="Department" datatype="string">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="6" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="s"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+												<entry name="Cell" outkey="17" annotation="Shares" datatype="double">
+													<condition>
+														<expression>
+															<function name="logical-and" library="core">
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="n"/>
+																		</expression>
+																		<expression>
+																			<constant value="7" datatype="long"/>
+																		</expression>
+																	</function>
+																</expression>
+																<expression>
+																	<function name="equal" library="core">
+																		<expression>
+																			<attribute name="t"/>
+																		</expression>
+																		<expression>
+																			<constant value="n"/>
+																		</expression>
+																	</function>
+																</expression>
+															</function>
+														</expression>
+													</condition>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<excel inputinstance="Nanonull Inc.xlsx" outputinstance="Nanonull Inc.xlsx"/>
+					</data>
+				</component>
+				<component name="value-map" library="core" uid="30" kind="23">
+					<properties/>
+					<sources>
+						<datapoint pos="0" key="83"/>
+					</sources>
+					<targets>
+						<datapoint pos="0" key="82"/>
+					</targets>
+					<view ltx="579" lty="277" rbx="697" rby="316"/>
+					<data>
+						<wsdl/>
+						<valuemap enableDefaultValue="1">
+							<valuemapTable>
+								<entry from="Administration" to="true"/>
+								<entry from="Marketing" to="true"/>
+							</valuemapTable>
+							<input name="Department" type="string"/>
+							<result name="IsExternal" type="boolean" defaultValue="false"/>
+						</valuemap>
+					</data>
+				</component>
+				<component name="employees" library="json" uid="2" kind="31">
+					<properties XSLTTargetEncoding="UTF-8" XSLTDefaultOutput="1"/>
+					<view ltx="808" lty="1" rbx="1113" rby="231"/>
+					<data>
+						<root scrollposition="1">
+							<header>
+								<namespaces>
+									<namespace/>
+									<namespace uid="http://www.altova.com/mapforce"/>
+								</namespaces>
+							</header>
+							<entry name="FileInstance" ns="1" expanded="1">
+								<entry name="document" ns="1" expanded="1" casttotargettypemode="cast-in-subtree">
+									<entry name="root" expanded="1">
+										<entry name="object" expanded="1">
+											<entry name="Company" type="json-property" expanded="1">
+												<entry name="string" inpkey="1"/>
+											</entry>
+											<entry name="Employees" type="json-property" expanded="1">
+												<entry name="array" expanded="1">
+													<entry name="item" type="json-item" expanded="1">
+														<entry name="object" inpkey="18" expanded="1">
+															<entry name="First" type="json-property" expanded="1">
+																<entry name="string" inpkey="19"/>
+															</entry>
+															<entry name="Last" type="json-property" expanded="1">
+																<entry name="string" inpkey="20"/>
+															</entry>
+															<entry name="Phone" type="json-property" expanded="1">
+																<entry name="object" expanded="1">
+																	<entry name="Extension" type="json-property" expanded="1">
+																		<entry name="number" inpkey="49"/>
+																	</entry>
+																	<entry name="May be provided to external contacts" type="json-property" expanded="1">
+																		<entry name="boolean" inpkey="62"/>
+																	</entry>
+																</entry>
+															</entry>
+															<entry name="Shares" type="json-property" expanded="1">
+																<entry name="number" inpkey="22"/>
+																<entry name="null" inpkey="28"/>
+															</entry>
+														</entry>
+													</entry>
+												</entry>
+											</entry>
+										</entry>
+									</entry>
+								</entry>
+							</entry>
+						</root>
+						<wsdl/>
+						<json schema="employees.schema.json"/>
+					</data>
+				</component>
+			</children>
+			<graph directed="1">
+				<edges/>
+				<vertices>
+					<vertex vertexkey="2">
+						<edges>
+							<edge vertexkey="1" edgekey="3"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="13">
+						<edges>
+							<edge vertexkey="18" edgekey="23"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="14">
+						<edges>
+							<edge vertexkey="19" edgekey="24"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="15">
+						<edges>
+							<edge vertexkey="20" edgekey="25"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="16">
+						<edges>
+							<edge vertexkey="49" edgekey="54"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="17">
+						<edges>
+							<edge vertexkey="22" edgekey="35"/>
+							<edge vertexkey="29" edgekey="36"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="30">
+						<edges>
+							<edge vertexkey="31" edgekey="37"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="33">
+						<edges>
+							<edge vertexkey="28" edgekey="38"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="34">
+						<edges>
+							<edge vertexkey="32" edgekey="39"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="43">
+						<edges>
+							<edge vertexkey="83" edgekey="84"/>
+						</edges>
+					</vertex>
+					<vertex vertexkey="82">
+						<edges>
+							<edge vertexkey="62" edgekey="85"/>
+						</edges>
+					</vertex>
+				</vertices>
+			</graph>
+		</structure>
+	</component>
+</mapping>
