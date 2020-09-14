@@ -6,89 +6,95 @@ If a copy of the MPL was not distributed with this
 file, You can obtain one at hhttps://spdx.org/licenses/MIT.html */
 "use strict";
 var validate = (function () {
-    var refVal = [];
-    return function validate(data, dataPath, parentData, parentDataProperty, rootData) {
-        "use strict";
-        validate.errors = null;
-        return true;
-    };
+  var refVal = [];
+  return function validate(
+    data,
+    dataPath,
+    parentData,
+    parentDataProperty,
+    rootData
+  ) {
+    "use strict";
+    validate.errors = null;
+    return true;
+  };
 })();
 validate.schema = {
-    Release: "00401",
-    DocumentType: "244",
-    TransactionSet: [
+  Release: "00401",
+  DocumentType: "244",
+  TransactionSet: [
+    {
+      Id: "ST",
+    },
+    {
+      Id: "BGN",
+    },
+    {
+      Id: "NM1Loop1",
+      Max: "unbounded",
+      Loop: [
         {
-            Id: "ST",
+          Id: "NM1",
         },
         {
-            Id: "BGN",
+          Id: "DTM",
         },
         {
-            Id: "NM1Loop1",
-            Max: "unbounded",
-            Loop: [
+          Id: "N1Loop1",
+          Max: "unbounded",
+          Loop: [
+            {
+              Id: "N1",
+            },
+            {
+              Id: "N2",
+              Min: 0,
+              Max: "unbounded",
+            },
+            {
+              Id: "BSFLoop1",
+              Max: "unbounded",
+              Loop: [
                 {
-                    Id: "NM1",
+                  Id: "BSF",
                 },
                 {
-                    Id: "DTM",
+                  Id: "NX2Loop1",
+                  Max: "unbounded",
+                  Loop: [
+                    {
+                      Id: "NX2",
+                    },
+                    {
+                      Id: "COM",
+                      Min: 0,
+                      Max: "unbounded",
+                    },
+                  ],
                 },
                 {
-                    Id: "N1Loop1",
-                    Max: "unbounded",
-                    Loop: [
-                        {
-                            Id: "N1",
-                        },
-                        {
-                            Id: "N2",
-                            Min: 0,
-                            Max: "unbounded",
-                        },
-                        {
-                            Id: "BSFLoop1",
-                            Max: "unbounded",
-                            Loop: [
-                                {
-                                    Id: "BSF",
-                                },
-                                {
-                                    Id: "NX2Loop1",
-                                    Max: "unbounded",
-                                    Loop: [
-                                        {
-                                            Id: "NX2",
-                                        },
-                                        {
-                                            Id: "COM",
-                                            Min: 0,
-                                            Max: "unbounded",
-                                        },
-                                    ],
-                                },
-                                {
-                                    Id: "PIDLoop1",
-                                    Max: "unbounded",
-                                    Loop: [
-                                        {
-                                            Id: "PID",
-                                        },
-                                        {
-                                            Id: "CID",
-                                            Min: 0,
-                                        },
-                                    ],
-                                },
-                            ],
-                        },
-                    ],
+                  Id: "PIDLoop1",
+                  Max: "unbounded",
+                  Loop: [
+                    {
+                      Id: "PID",
+                    },
+                    {
+                      Id: "CID",
+                      Min: 0,
+                    },
+                  ],
                 },
-            ],
+              ],
+            },
+          ],
         },
-        {
-            Id: "SE",
-        },
-    ],
+      ],
+    },
+    {
+      Id: "SE",
+    },
+  ],
 };
 validate.errors = null;
 module.exports = validate;

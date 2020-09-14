@@ -6,81 +6,87 @@ If a copy of the MPL was not distributed with this
 file, You can obtain one at hhttps://spdx.org/licenses/MIT.html */
 "use strict";
 var validate = (function () {
-    var refVal = [];
-    return function validate(data, dataPath, parentData, parentDataProperty, rootData) {
-        "use strict";
-        validate.errors = null;
-        return true;
-    };
+  var refVal = [];
+  return function validate(
+    data,
+    dataPath,
+    parentData,
+    parentDataProperty,
+    rootData
+  ) {
+    "use strict";
+    validate.errors = null;
+    return true;
+  };
 })();
 validate.schema = {
-    Release: "00401",
-    DocumentType: "147",
-    TransactionSet: [
+  Release: "00401",
+  DocumentType: "147",
+  TransactionSet: [
+    {
+      Id: "ST",
+    },
+    {
+      Id: "BGN",
+    },
+    {
+      Id: "AAA",
+    },
+    {
+      Id: "REF",
+      Max: 10,
+    },
+    {
+      Id: "PWK",
+      Min: 0,
+    },
+    {
+      Id: "NTE",
+      Min: 0,
+      Max: 15,
+    },
+    {
+      Id: "N1Loop1",
+      Max: 2,
+      Loop: [
         {
-            Id: "ST",
+          Id: "N1",
         },
         {
-            Id: "BGN",
+          Id: "N2",
+          Min: 0,
         },
         {
-            Id: "AAA",
+          Id: "N3",
+          Min: 0,
         },
         {
-            Id: "REF",
-            Max: 10,
+          Id: "N4",
+          Min: 0,
         },
         {
-            Id: "PWK",
-            Min: 0,
+          Id: "PER",
+          Min: 0,
+        },
+      ],
+    },
+    {
+      Id: "IN1Loop1",
+      Max: 15,
+      Loop: [
+        {
+          Id: "IN1",
         },
         {
-            Id: "NTE",
-            Min: 0,
-            Max: 15,
+          Id: "IN2",
+          Max: 10,
         },
-        {
-            Id: "N1Loop1",
-            Max: 2,
-            Loop: [
-                {
-                    Id: "N1",
-                },
-                {
-                    Id: "N2",
-                    Min: 0,
-                },
-                {
-                    Id: "N3",
-                    Min: 0,
-                },
-                {
-                    Id: "N4",
-                    Min: 0,
-                },
-                {
-                    Id: "PER",
-                    Min: 0,
-                },
-            ],
-        },
-        {
-            Id: "IN1Loop1",
-            Max: 15,
-            Loop: [
-                {
-                    Id: "IN1",
-                },
-                {
-                    Id: "IN2",
-                    Max: 10,
-                },
-            ],
-        },
-        {
-            Id: "SE",
-        },
-    ],
+      ],
+    },
+    {
+      Id: "SE",
+    },
+  ],
 };
 validate.errors = null;
 module.exports = validate;

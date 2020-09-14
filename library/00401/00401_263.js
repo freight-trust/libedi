@@ -6,82 +6,88 @@ If a copy of the MPL was not distributed with this
 file, You can obtain one at hhttps://spdx.org/licenses/MIT.html */
 "use strict";
 var validate = (function () {
-    var refVal = [];
-    return function validate(data, dataPath, parentData, parentDataProperty, rootData) {
-        "use strict";
-        validate.errors = null;
-        return true;
-    };
+  var refVal = [];
+  return function validate(
+    data,
+    dataPath,
+    parentData,
+    parentDataProperty,
+    rootData
+  ) {
+    "use strict";
+    validate.errors = null;
+    return true;
+  };
 })();
 validate.schema = {
-    Release: "00401",
-    DocumentType: "263",
-    TransactionSet: [
+  Release: "00401",
+  DocumentType: "263",
+  TransactionSet: [
+    {
+      Id: "ST",
+    },
+    {
+      Id: "BGN",
+    },
+    {
+      Id: "N1",
+      Max: 2,
+    },
+    {
+      Id: "LXLoop1",
+      Max: "unbounded",
+      Loop: [
         {
-            Id: "ST",
+          Id: "LX",
         },
         {
-            Id: "BGN",
+          Id: "N1",
         },
         {
-            Id: "N1",
-            Max: 2,
-        },
-        {
-            Id: "LXLoop1",
-            Max: "unbounded",
-            Loop: [
+          Id: "REFLoop1",
+          Max: "unbounded",
+          Loop: [
+            {
+              Id: "REF",
+            },
+            {
+              Id: "N1",
+            },
+            {
+              Id: "MIR",
+            },
+            {
+              Id: "TXI",
+              Min: 0,
+              Max: 5,
+            },
+            {
+              Id: "N9",
+              Min: 0,
+              Max: 10,
+            },
+            {
+              Id: "G63Loop1",
+              Min: 0,
+              Max: "unbounded",
+              Loop: [
                 {
-                    Id: "LX",
+                  Id: "G63",
                 },
                 {
-                    Id: "N1",
+                  Id: "PCT",
+                  Min: 0,
                 },
-                {
-                    Id: "REFLoop1",
-                    Max: "unbounded",
-                    Loop: [
-                        {
-                            Id: "REF",
-                        },
-                        {
-                            Id: "N1",
-                        },
-                        {
-                            Id: "MIR",
-                        },
-                        {
-                            Id: "TXI",
-                            Min: 0,
-                            Max: 5,
-                        },
-                        {
-                            Id: "N9",
-                            Min: 0,
-                            Max: 10,
-                        },
-                        {
-                            Id: "G63Loop1",
-                            Min: 0,
-                            Max: "unbounded",
-                            Loop: [
-                                {
-                                    Id: "G63",
-                                },
-                                {
-                                    Id: "PCT",
-                                    Min: 0,
-                                },
-                            ],
-                        },
-                    ],
-                },
-            ],
+              ],
+            },
+          ],
         },
-        {
-            Id: "SE",
-        },
-    ],
+      ],
+    },
+    {
+      Id: "SE",
+    },
+  ],
 };
 validate.errors = null;
 module.exports = validate;

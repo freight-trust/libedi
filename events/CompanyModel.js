@@ -16,7 +16,7 @@ var CampaignModel = require("./CampaignModel");
  * @constructor
  */
 var CompanyModel = function (obj) {
-  if(!obj) {
+  if (!obj) {
     this.companyId = null;
     this.modifiedTime = null;
     this.ipAddress = null;
@@ -25,7 +25,7 @@ var CompanyModel = function (obj) {
     this.metadata = null;
     this.campaign = null;
     // Append to variable dictionary
-    this._variableDict['companyId'] = 'company_id'; 
+    this._variableDict["companyId"] = "company_id";
   } else {
     this.companyId = obj.companyId;
     this.modifiedTime = new Date(obj.modifiedTime);
@@ -34,29 +34,28 @@ var CompanyModel = function (obj) {
     this.companyDomain = obj.companyDomain;
     this.metadata = obj.metadata;
     this.campaign = new CampaignModel(obj.campaign);
-    this._variableDict['companyId'] = 'company_id';
+    this._variableDict["companyId"] = "company_id";
   }
 };
 
 CompanyModel.prototype = new BaseModel();
 CompanyModel.prototype.constructor = CompanyModel;
 
-
 /**
  * Modified time
  *
  * @return {dateTime}
  */
-CompanyModel.prototype.getModifiedTime = function() {
+CompanyModel.prototype.getModifiedTime = function () {
   return this.modifiedTime;
 };
 
 /**
-* Setter for modified time
-*
-* @param {dateTime} value
-*/
-CompanyModel.prototype.setModifiedTime = function(value) {
+ * Setter for modified time
+ *
+ * @param {dateTime} value
+ */
+CompanyModel.prototype.setModifiedTime = function (value) {
   this.modifiedTime = value;
 };
 
@@ -65,54 +64,52 @@ CompanyModel.prototype.setModifiedTime = function(value) {
  *
  * @return {string}
  */
-CompanyModel.prototype.getCompanyId = function() {
+CompanyModel.prototype.getCompanyId = function () {
   return this.companyId;
 };
 
 /**
-* Setter for the company Id
-*
-* @param {string} value
-*/
-CompanyModel.prototype.setCompanyId = function(value) {
+ * Setter for the company Id
+ *
+ * @param {string} value
+ */
+CompanyModel.prototype.setCompanyId = function (value) {
   this.companyId = value;
 };
-
 
 /**
  * Get the ip address
  *
  * @return {string|null}
  */
-CompanyModel.prototype.getIpAddress = function() {
+CompanyModel.prototype.getIpAddress = function () {
   return this.ipAddress;
 };
 
 /**
-* Setter for the ip address
-*
-* @param {string|null} value
-*/
-CompanyModel.prototype.setIpAddress = function(value) {
+ * Setter for the ip address
+ *
+ * @param {string|null} value
+ */
+CompanyModel.prototype.setIpAddress = function (value) {
   this.ipAddress = value;
 };
-
 
 /**
  * Get the session token
  *
  * @return {string|null}
  */
-CompanyModel.prototype.getSessionToken = function() {
+CompanyModel.prototype.getSessionToken = function () {
   return this.sessionToken;
 };
 
 /**
-* Setter for the session token
-*
-* @param {string|null} value
-*/
-CompanyModel.prototype.setSessionToken = function(value) {
+ * Setter for the session token
+ *
+ * @param {string|null} value
+ */
+CompanyModel.prototype.setSessionToken = function (value) {
   this.sessionToken = value;
 };
 
@@ -121,16 +118,16 @@ CompanyModel.prototype.setSessionToken = function(value) {
  *
  * @return {string|null}
  */
-CompanyModel.prototype.getCompanyDomain = function() {
+CompanyModel.prototype.getCompanyDomain = function () {
   return this.companyDomain;
 };
 
 /**
-* Setter for the company domain
-*
-* @param {string|null} value
-*/
-CompanyModel.prototype.setCompanyDomain = function(value) {
+ * Setter for the company domain
+ *
+ * @param {string|null} value
+ */
+CompanyModel.prototype.setCompanyDomain = function (value) {
   this.companyDomain = value;
 };
 
@@ -139,7 +136,7 @@ CompanyModel.prototype.setCompanyDomain = function(value) {
  *
  * @return {object|null}
  */
-CompanyModel.prototype.getMetadata = function() {
+CompanyModel.prototype.getMetadata = function () {
   return this.metadata;
 };
 
@@ -148,7 +145,7 @@ CompanyModel.prototype.getMetadata = function() {
  *
  * @param {object|null} value
  */
-CompanyModel.prototype.setMetadata = function(value) {
+CompanyModel.prototype.setMetadata = function (value) {
   this.metadata = value;
 };
 
@@ -157,16 +154,16 @@ CompanyModel.prototype.setMetadata = function(value) {
  *
  * @return {CampaignModel|null}
  */
-CompanyModel.prototype.getCampaign = function() {
+CompanyModel.prototype.getCampaign = function () {
   return this.campaign;
 };
 
 /**
-* Setter for the Campaign object
-*
-* @param {CampaignModel|null} value
-*/
-CompanyModel.prototype.setCampaign = function(value) {
+ * Setter for the Campaign object
+ *
+ * @param {CampaignModel|null} value
+ */
+CompanyModel.prototype.setCampaign = function (value) {
   this.campaign = value;
 };
 

@@ -1,5 +1,5 @@
 /**
- * 
+ *
  *
  *
  */
@@ -10,13 +10,13 @@ var BaseModel = require("./BaseModel");
  * @constructor
  */
 StatusModel = function (obj) {
-    if(!obj) {
-        this.status = null;     
-        this.region = null;     
-    } else {
-        this.status = obj.status;
-        this.region = obj.region;
-    }
+  if (!obj) {
+    this.status = null;
+    this.region = null;
+  } else {
+    this.status = obj.status;
+    this.region = obj.region;
+  }
 };
 
 StatusModel.prototype = new BaseModel();
@@ -27,17 +27,17 @@ StatusModel.prototype.constructor = StatusModel;
  *
  * @return {bool}
  */
-StatusModel.prototype.getStatus = function() {
-    return this.status;
+StatusModel.prototype.getStatus = function () {
+  return this.status;
 };
 
 /**
  * Setter for Status
- * 
- * @param {bool} value 
+ *
+ * @param {bool} value
  */
-StatusModel.prototype.setStatus = function(value) {
-    this.status = value;
+StatusModel.prototype.setStatus = function (value) {
+  this.status = value;
 };
 
 /**
@@ -45,18 +45,17 @@ StatusModel.prototype.setStatus = function(value) {
  *
  * @return {string}
  */
-StatusModel.prototype.getRegion = function() {
-    return this.region;
+StatusModel.prototype.getRegion = function () {
+  return this.region;
 };
 
 /**
  * Setter for Region
- * 
- * @param {string} value 
+ *
+ * @param {string} value
  */
-StatusModel.prototype.setRegion = function(value) {
-    this.region = value;
+StatusModel.prototype.setRegion = function (value) {
+  this.region = value;
 };
-
 
 module.exports = StatusModel;

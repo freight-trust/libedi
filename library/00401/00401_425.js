@@ -6,41 +6,47 @@ If a copy of the MPL was not distributed with this
 file, You can obtain one at hhttps://spdx.org/licenses/MIT.html */
 "use strict";
 var validate = (function () {
-    var refVal = [];
-    return function validate(data, dataPath, parentData, parentDataProperty, rootData) {
-        "use strict";
-        validate.errors = null;
-        return true;
-    };
+  var refVal = [];
+  return function validate(
+    data,
+    dataPath,
+    parentData,
+    parentDataProperty,
+    rootData
+  ) {
+    "use strict";
+    validate.errors = null;
+    return true;
+  };
 })();
 validate.schema = {
-    Release: "00401",
-    DocumentType: "425",
-    TransactionSet: [
+  Release: "00401",
+  DocumentType: "425",
+  TransactionSet: [
+    {
+      Id: "ST",
+    },
+    {
+      Id: "ZTLoop1",
+      Max: 255,
+      Loop: [
         {
-            Id: "ST",
+          Id: "ZT",
         },
         {
-            Id: "ZTLoop1",
-            Max: 255,
-            Loop: [
-                {
-                    Id: "ZT",
-                },
-                {
-                    Id: "F9",
-                    Min: 0,
-                },
-                {
-                    Id: "D9",
-                    Min: 0,
-                },
-            ],
+          Id: "F9",
+          Min: 0,
         },
         {
-            Id: "SE",
+          Id: "D9",
+          Min: 0,
         },
-    ],
+      ],
+    },
+    {
+      Id: "SE",
+    },
+  ],
 };
 validate.errors = null;
 module.exports = validate;

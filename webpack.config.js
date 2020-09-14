@@ -1,33 +1,32 @@
-
-const DtsBundleWebpack = require('dts-bundle-webpack')
+const DtsBundleWebpack = require("dts-bundle-webpack");
 
 module.exports = {
-  mode: 'production',
-  entry: './core.ts',
+  mode: "production",
+  entry: "./core.ts",
   output: {
-    libraryTarget: 'commonjs',
-    filename: 'index.js',
-    path: __dirname
+    libraryTarget: "commonjs",
+    filename: "index.js",
+    path: __dirname,
   },
   externals: {
-    '../nodeRequire.js': './nodeRequire.js'
+    "../nodeRequire.js": "./nodeRequire.js",
   },
   resolve: {
-    extensions: ['.ts']
+    extensions: [".ts"],
   },
   module: {
-    rules: [{ test: /\.tsx?$/, loader: 'ts-loader' }]
+    rules: [{ test: /\.tsx?$/, loader: "ts-loader" }],
   },
-  target: 'node',
+  target: "node",
   optimization: {
-    minimize: false
+    minimize: false,
   },
   plugins: [
     new DtsBundleWebpack({
-      name: 'libedi',
-      baseDir: './',
-      main: 'dist/core.d.ts',
-      out: 'index.d.ts'
-    })
-  ]
-}
+      name: "libedi",
+      baseDir: "./",
+      main: "dist/core.d.ts",
+      out: "index.d.ts",
+    }),
+  ],
+};

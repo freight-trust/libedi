@@ -9,33 +9,33 @@ var BaseModel = require("./BaseModel");
  * @constructor
  */
 EventRequestModel = function (obj) {
-    if(!obj) {
-        this.time = null;
-        this.uri = null;
-        this.verb = null;
-        this.headers = null;
-        this.apiVersion = null;
-        this.ipAddress = null;
-        this.body = null;
-        this.transferEncoding = null;
-        //Append to variable dictionary
-        this._variableDict['apiVersion'] = 'api_version';
-        this._variableDict['ipAddress'] = 'ip_address';
-        this._variableDict['transferEncoding'] = 'transfer_encoding';
-    } else {
-        this.time = new Date(obj.time);
-        this.uri = obj.uri;
-        this.verb = obj.verb;
-        this.headers = obj.headers;
-        this.apiVersion = obj.apiVersion;
-        this.ipAddress = obj.ipAddress;
-        this.body = obj.body;
-        this.transferEncoding = obj.transferEncoding;
-        //Append to variable dictionary
-        this._variableDict['apiVersion'] = 'api_version';
-        this._variableDict['ipAddress'] = 'ip_address';
-        this._variableDict['transferEncoding'] = 'transfer_encoding';
-    }
+  if (!obj) {
+    this.time = null;
+    this.uri = null;
+    this.verb = null;
+    this.headers = null;
+    this.apiVersion = null;
+    this.ipAddress = null;
+    this.body = null;
+    this.transferEncoding = null;
+    //Append to variable dictionary
+    this._variableDict["apiVersion"] = "api_version";
+    this._variableDict["ipAddress"] = "ip_address";
+    this._variableDict["transferEncoding"] = "transfer_encoding";
+  } else {
+    this.time = new Date(obj.time);
+    this.uri = obj.uri;
+    this.verb = obj.verb;
+    this.headers = obj.headers;
+    this.apiVersion = obj.apiVersion;
+    this.ipAddress = obj.ipAddress;
+    this.body = obj.body;
+    this.transferEncoding = obj.transferEncoding;
+    //Append to variable dictionary
+    this._variableDict["apiVersion"] = "api_version";
+    this._variableDict["ipAddress"] = "ip_address";
+    this._variableDict["transferEncoding"] = "transfer_encoding";
+  }
 };
 
 EventRequestModel.prototype = new BaseModel();
@@ -46,8 +46,8 @@ EventRequestModel.prototype.constructor = EventRequestModel;
  *
  * @return {dateTime}
  */
-EventRequestModel.prototype.getTime = function() {
-    return this.time;
+EventRequestModel.prototype.getTime = function () {
+  return this.time;
 };
 
 /**
@@ -55,8 +55,8 @@ EventRequestModel.prototype.getTime = function() {
  *
  * @param {dateTime} value
  */
-EventRequestModel.prototype.setTime = function(value) {
-    this.time = value;
+EventRequestModel.prototype.setTime = function (value) {
+  this.time = value;
 };
 
 /**
@@ -64,8 +64,8 @@ EventRequestModel.prototype.setTime = function(value) {
  *
  * @return {string}
  */
-EventRequestModel.prototype.getUri = function() {
-    return this.uri;
+EventRequestModel.prototype.getUri = function () {
+  return this.uri;
 };
 
 /**
@@ -73,8 +73,8 @@ EventRequestModel.prototype.getUri = function() {
  *
  * @param {string} value
  */
-EventRequestModel.prototype.setUri = function(value) {
-    this.uri = value;
+EventRequestModel.prototype.setUri = function (value) {
+  this.uri = value;
 };
 
 /**
@@ -82,8 +82,8 @@ EventRequestModel.prototype.setUri = function(value) {
  *
  * @return {string}
  */
-EventRequestModel.prototype.getVerb = function() {
-    return this.verb;
+EventRequestModel.prototype.getVerb = function () {
+  return this.verb;
 };
 
 /**
@@ -91,8 +91,8 @@ EventRequestModel.prototype.getVerb = function() {
  *
  * @param {string} value
  */
-EventRequestModel.prototype.setVerb = function(value) {
-    this.verb = value;
+EventRequestModel.prototype.setVerb = function (value) {
+  this.verb = value;
 };
 
 /**
@@ -100,8 +100,8 @@ EventRequestModel.prototype.setVerb = function(value) {
  *
  * @return {object}
  */
-EventRequestModel.prototype.getHeaders = function() {
-    return this.headers;
+EventRequestModel.prototype.getHeaders = function () {
+  return this.headers;
 };
 
 /**
@@ -109,8 +109,8 @@ EventRequestModel.prototype.getHeaders = function() {
  *
  * @param {object} value
  */
-EventRequestModel.prototype.setHeaders = function(value) {
-    this.headers = value;
+EventRequestModel.prototype.setHeaders = function (value) {
+  this.headers = value;
 };
 
 /**
@@ -118,8 +118,8 @@ EventRequestModel.prototype.setHeaders = function(value) {
  *
  * @return {string|null}
  */
-EventRequestModel.prototype.getApiVersion = function() {
-    return this.apiVersion;
+EventRequestModel.prototype.getApiVersion = function () {
+  return this.apiVersion;
 };
 
 /**
@@ -127,8 +127,8 @@ EventRequestModel.prototype.getApiVersion = function() {
  *
  * @param {string|null} value
  */
-EventRequestModel.prototype.setApiVersion = function(value) {
-    this.apiVersion = value;
+EventRequestModel.prototype.setApiVersion = function (value) {
+  this.apiVersion = value;
 };
 
 /**
@@ -136,8 +136,8 @@ EventRequestModel.prototype.setApiVersion = function(value) {
  *
  * @return {string|null}
  */
-EventRequestModel.prototype.getIpAddress = function() {
-    return this.ipAddress;
+EventRequestModel.prototype.getIpAddress = function () {
+  return this.ipAddress;
 };
 
 /**
@@ -145,8 +145,8 @@ EventRequestModel.prototype.getIpAddress = function() {
  *
  * @param {string|null} value
  */
-EventRequestModel.prototype.setIpAddress = function(value) {
-    this.ipAddress = value;
+EventRequestModel.prototype.setIpAddress = function (value) {
+  this.ipAddress = value;
 };
 
 /**
@@ -154,8 +154,8 @@ EventRequestModel.prototype.setIpAddress = function(value) {
  *
  * @return {object|null}
  */
-EventRequestModel.prototype.getBody = function() {
-    return this.body;
+EventRequestModel.prototype.getBody = function () {
+  return this.body;
 };
 
 /**
@@ -163,9 +163,8 @@ EventRequestModel.prototype.getBody = function() {
  *
  * @param {object|null} value
  */
-EventRequestModel.prototype.setBody = function(value) {
-    this.body = value;
+EventRequestModel.prototype.setBody = function (value) {
+  this.body = value;
 };
-
 
 module.exports = EventRequestModel;

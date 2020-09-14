@@ -6,7 +6,7 @@
 
 ## Overview
 
-### Schema 
+### Schema
 
 ```javascript
 validate.schema = {
@@ -118,7 +118,7 @@ validate.schema = {
 		{
 			Id: "L7",
 			Min: 0,
-      
+
   <!-- truncated ... -->
 ```
 
@@ -132,36 +132,36 @@ See [Examples](#)
 // Generate valid ASC X12 EDI from an object.
 const jsen = {
   options: {
-    elementDelimiter: '*',
-    segmentTerminator: '\n'
+    elementDelimiter: "*",
+    segmentTerminator: "\n",
   },
   header: [
-    '00',
-    '',
-    '00',
-    '',
-    'ZZ',
-    '10000000',
-    '01',
-    '100000000',
-    '100000',
-    '0425',
-    '|',
-    '00403',
-    '100748195',
-    '0',
-    'P',
-    '>'
+    "00",
+    "",
+    "00",
+    "",
+    "ZZ",
+    "10000000",
+    "01",
+    "100000000",
+    "100000",
+    "0425",
+    "|",
+    "00403",
+    "100748195",
+    "0",
+    "P",
+    ">",
   ],
-  functionalGroups: [...etc]
-}
-const generator = new X12Generator(jsen)
+  functionalGroups: [...etc],
+};
+const generator = new X12Generator(jsen);
 
 // Query X12 like an object model
-const engine = new X12QueryEngine()
-const results = engine.query(interchange, 'REF02:REF01["IA"]')
+const engine = new X12QueryEngine();
+const results = engine.query(interchange, 'REF02:REF01["IA"]');
 
-results.forEach(result => {
+results.forEach((result) => {
   // Do something with each result.
   // result.interchange
   // result.functionalGroup
@@ -169,9 +169,8 @@ results.forEach(result => {
   // result.segment
   // result.element
   // result.value OR result.values
-})
+});
 ```
-
 
 ## Extending
 

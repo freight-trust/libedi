@@ -1,309 +1,315 @@
 "use strict";
 var validate = (function () {
-    var refVal = [];
-    return function validate(data, dataPath, parentData, parentDataProperty, rootData) {
-        "use strict";
-        validate.errors = null;
-        return true;
-    };
+  var refVal = [];
+  return function validate(
+    data,
+    dataPath,
+    parentData,
+    parentDataProperty,
+    rootData
+  ) {
+    "use strict";
+    validate.errors = null;
+    return true;
+  };
 })();
 validate.schema = {
-    Release: "00501",
-    DocumentType: 255,
-    TransactionSet: [
+  Release: "00501",
+  DocumentType: 255,
+  TransactionSet: [
+    {
+      ID: "ST",
+      Min: 0,
+    },
+    {
+      ID: "BGN",
+    },
+    {
+      ID: "CUR",
+      Min: 0,
+    },
+    {
+      ID: "NM1Loop1",
+      Min: 0,
+      Max: 9,
+      Loop: [
         {
-            ID: "ST",
-            Min: 0,
+          ID: "NM1",
         },
         {
-            ID: "BGN",
+          ID: "N3",
+          Min: 0,
+          Max: 2,
         },
         {
-            ID: "CUR",
-            Min: 0,
+          ID: "N4",
+          Min: 0,
         },
         {
-            ID: "NM1Loop1",
-            Min: 0,
-            Max: 9,
-            Loop: [
-                {
-                    ID: "NM1",
-                },
-                {
-                    ID: "N3",
-                    Min: 0,
-                    Max: 2,
-                },
-                {
-                    ID: "N4",
-                    Min: 0,
-                },
-                {
-                    ID: "REF",
-                    Min: 0,
-                    Max: 9,
-                },
-                {
-                    ID: "PER",
-                    Min: 0,
-                    Max: 3,
-                },
-            ],
+          ID: "REF",
+          Min: 0,
+          Max: 9,
         },
         {
-            ID: "ACTLoop1",
-            Max: "unbounded",
-            Loop: [
+          ID: "PER",
+          Min: 0,
+          Max: 3,
+        },
+      ],
+    },
+    {
+      ID: "ACTLoop1",
+      Max: "unbounded",
+      Loop: [
+        {
+          ID: "ACT",
+        },
+        {
+          ID: "AM1",
+          Min: 0,
+          Max: 9,
+        },
+        {
+          ID: "PWK",
+          Min: 0,
+        },
+        {
+          ID: "REF",
+          Min: 0,
+          Max: "unbounded",
+        },
+        {
+          ID: "PER",
+          Min: 0,
+          Max: 3,
+        },
+        {
+          ID: "DTM",
+          Min: 0,
+          Max: 9,
+        },
+        {
+          ID: "MSG",
+          Min: 0,
+          Max: 9,
+        },
+        {
+          ID: "YNQ",
+          Min: 0,
+          Max: 15,
+        },
+        {
+          ID: "NTE",
+          Min: 0,
+          Max: "unbounded",
+        },
+        {
+          ID: "NM1Loop2",
+          Max: "unbounded",
+          Loop: [
+            {
+              ID: "NM1",
+            },
+            {
+              ID: "N2",
+              Min: 0,
+              Max: 3,
+            },
+            {
+              ID: "LXLoop1",
+              Max: "unbounded",
+              Loop: [
                 {
-                    ID: "ACT",
+                  ID: "LX",
                 },
                 {
-                    ID: "AM1",
-                    Min: 0,
-                    Max: 9,
+                  ID: "N3",
+                  Min: 0,
+                  Max: 3,
                 },
                 {
-                    ID: "PWK",
-                    Min: 0,
+                  ID: "N4",
+                  Min: 0,
                 },
                 {
-                    ID: "REF",
-                    Min: 0,
-                    Max: "unbounded",
+                  ID: "ASI",
+                  Min: 0,
                 },
                 {
-                    ID: "PER",
-                    Min: 0,
-                    Max: 3,
+                  ID: "PER",
+                  Min: 0,
+                  Max: 3,
                 },
                 {
-                    ID: "DTM",
-                    Min: 0,
-                    Max: 9,
+                  ID: "DMG",
+                  Min: 0,
                 },
                 {
-                    ID: "MSG",
-                    Min: 0,
-                    Max: 9,
+                  ID: "IND",
+                  Min: 0,
                 },
                 {
-                    ID: "YNQ",
-                    Min: 0,
-                    Max: 15,
+                  ID: "CD2",
+                  Min: 0,
+                  Max: 9,
                 },
                 {
-                    ID: "NTE",
-                    Min: 0,
-                    Max: "unbounded",
+                  ID: "MSG",
+                  Min: 0,
+                  Max: 9,
+                },
+              ],
+            },
+            {
+              ID: "EFILoop1",
+              Min: 0,
+              Max: "unbounded",
+              Loop: [
+                {
+                  ID: "EFI",
                 },
                 {
-                    ID: "NM1Loop2",
-                    Max: "unbounded",
-                    Loop: [
+                  ID: "BIN",
+                  Min: 0,
+                },
+              ],
+            },
+            {
+              ID: "PO1Loop1",
+              Min: 0,
+              Max: "unbounded",
+              Loop: [
+                {
+                  ID: "PO1",
+                },
+                {
+                  ID: "ASI",
+                  Min: 0,
+                },
+                {
+                  ID: "DMA",
+                  Min: 0,
+                  Max: 9,
+                },
+                {
+                  ID: "REF",
+                  Min: 0,
+                  Max: 9,
+                },
+                {
+                  ID: "DTP",
+                  Min: 0,
+                  Max: 9,
+                },
+                {
+                  ID: "MSG",
+                  Min: 0,
+                  Max: 9,
+                },
+                {
+                  ID: "LSLoop1",
+                  Min: 0,
+                  Loop: [
+                    {
+                      ID: "LS",
+                      Min: 1,
+                      Max: 1,
+                    },
+                    {
+                      ID: "LXLoop2",
+                      Min: 0,
+                      Max: "unbounded",
+                      Loop: [
                         {
-                            ID: "NM1",
+                          ID: "LX",
                         },
                         {
-                            ID: "N2",
-                            Min: 0,
-                            Max: 3,
+                          ID: "NM1",
                         },
                         {
-                            ID: "LXLoop1",
-                            Max: "unbounded",
-                            Loop: [
-                                {
-                                    ID: "LX",
-                                },
-                                {
-                                    ID: "N3",
-                                    Min: 0,
-                                    Max: 3,
-                                },
-                                {
-                                    ID: "N4",
-                                    Min: 0,
-                                },
-                                {
-                                    ID: "ASI",
-                                    Min: 0,
-                                },
-                                {
-                                    ID: "PER",
-                                    Min: 0,
-                                    Max: 3,
-                                },
-                                {
-                                    ID: "DMG",
-                                    Min: 0,
-                                },
-                                {
-                                    ID: "IND",
-                                    Min: 0,
-                                },
-                                {
-                                    ID: "CD2",
-                                    Min: 0,
-                                    Max: 9,
-                                },
-                                {
-                                    ID: "MSG",
-                                    Min: 0,
-                                    Max: 9,
-                                },
-                            ],
+                          ID: "N2",
+                          Min: 0,
+                          Max: 3,
                         },
                         {
-                            ID: "EFILoop1",
-                            Min: 0,
-                            Max: "unbounded",
-                            Loop: [
-                                {
-                                    ID: "EFI",
-                                },
-                                {
-                                    ID: "BIN",
-                                    Min: 0,
-                                },
-                            ],
+                          ID: "NX2",
+                          Min: 0,
+                          Max: "unbounded",
                         },
                         {
-                            ID: "PO1Loop1",
-                            Min: 0,
-                            Max: "unbounded",
-                            Loop: [
-                                {
-                                    ID: "PO1",
-                                },
-                                {
-                                    ID: "ASI",
-                                    Min: 0,
-                                },
-                                {
-                                    ID: "DMA",
-                                    Min: 0,
-                                    Max: 9,
-                                },
-                                {
-                                    ID: "REF",
-                                    Min: 0,
-                                    Max: 9,
-                                },
-                                {
-                                    ID: "DTP",
-                                    Min: 0,
-                                    Max: 9,
-                                },
-                                {
-                                    ID: "MSG",
-                                    Min: 0,
-                                    Max: 9,
-                                },
-                                {
-                                    ID: "LSLoop1",
-                                    Min: 0,
-                                    Loop: [
-                                        {
-                                            ID: "LS",
-                                            Min: 1,
-                                            Max: 1,
-                                        },
-                                        {
-                                            ID: "LXLoop2",
-                                            Min: 0,
-                                            Max: "unbounded",
-                                            Loop: [
-                                                {
-                                                    ID: "LX",
-                                                },
-                                                {
-                                                    ID: "NM1",
-                                                },
-                                                {
-                                                    ID: "N2",
-                                                    Min: 0,
-                                                    Max: 3,
-                                                },
-                                                {
-                                                    ID: "NX2",
-                                                    Min: 0,
-                                                    Max: "unbounded",
-                                                },
-                                                {
-                                                    ID: "N4",
-                                                    Min: 0,
-                                                },
-                                                {
-                                                    ID: "REC",
-                                                    Min: 0,
-                                                },
-                                                {
-                                                    ID: "IND",
-                                                    Min: 0,
-                                                },
-                                                {
-                                                    ID: "EMS",
-                                                    Min: 0,
-                                                },
-                                                {
-                                                    ID: "PER",
-                                                    Min: 0,
-                                                    Max: 3,
-                                                },
-                                                {
-                                                    ID: "CN1",
-                                                    Min: 0,
-                                                },
-                                                {
-                                                    ID: "DTP",
-                                                    Min: 0,
-                                                    Max: 9,
-                                                },
-                                                {
-                                                    ID: "CD2",
-                                                    Min: 0,
-                                                    Max: 9,
-                                                },
-                                                {
-                                                    ID: "REF",
-                                                    Min: 0,
-                                                    Max: 9,
-                                                },
-                                                {
-                                                    ID: "PWK",
-                                                    Min: 0,
-                                                },
-                                                {
-                                                    ID: "MSG",
-                                                    Min: 0,
-                                                    Max: 9,
-                                                },
-                                                {
-                                                    ID: "AM1",
-                                                    Min: 0,
-                                                    Max: "unbounded",
-                                                },
-                                            ],
-                                        },
-                                        {
-                                            ID: "LE",
-                                            Min: 1,
-                                            Max: 1,
-                                        },
-                                    ],
-                                },
-                            ],
+                          ID: "N4",
+                          Min: 0,
                         },
-                    ],
+                        {
+                          ID: "REC",
+                          Min: 0,
+                        },
+                        {
+                          ID: "IND",
+                          Min: 0,
+                        },
+                        {
+                          ID: "EMS",
+                          Min: 0,
+                        },
+                        {
+                          ID: "PER",
+                          Min: 0,
+                          Max: 3,
+                        },
+                        {
+                          ID: "CN1",
+                          Min: 0,
+                        },
+                        {
+                          ID: "DTP",
+                          Min: 0,
+                          Max: 9,
+                        },
+                        {
+                          ID: "CD2",
+                          Min: 0,
+                          Max: 9,
+                        },
+                        {
+                          ID: "REF",
+                          Min: 0,
+                          Max: 9,
+                        },
+                        {
+                          ID: "PWK",
+                          Min: 0,
+                        },
+                        {
+                          ID: "MSG",
+                          Min: 0,
+                          Max: 9,
+                        },
+                        {
+                          ID: "AM1",
+                          Min: 0,
+                          Max: "unbounded",
+                        },
+                      ],
+                    },
+                    {
+                      ID: "LE",
+                      Min: 1,
+                      Max: 1,
+                    },
+                  ],
                 },
-            ],
+              ],
+            },
+          ],
         },
-        {
-            ID: "SE",
-            Min: 0,
-        },
-    ],
+      ],
+    },
+    {
+      ID: "SE",
+      Min: 0,
+    },
+  ],
 };
 validate.errors = null;
 module.exports = validate;

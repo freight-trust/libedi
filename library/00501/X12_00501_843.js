@@ -1,868 +1,874 @@
 "use strict";
 var validate = (function () {
-    var refVal = [];
-    return function validate(data, dataPath, parentData, parentDataProperty, rootData) {
-        "use strict";
-        validate.errors = null;
-        return true;
-    };
+  var refVal = [];
+  return function validate(
+    data,
+    dataPath,
+    parentData,
+    parentDataProperty,
+    rootData
+  ) {
+    "use strict";
+    validate.errors = null;
+    return true;
+  };
 })();
 validate.schema = {
-    Release: "00501",
-    DocumentType: 843,
-    TransactionSet: [
+  Release: "00501",
+  DocumentType: 843,
+  TransactionSet: [
+    {
+      ID: "ST",
+      Min: 0,
+    },
+    {
+      ID: "BQR",
+    },
+    {
+      ID: "CUR",
+      Min: 0,
+    },
+    {
+      ID: "INC",
+      Min: 0,
+    },
+    {
+      ID: "REF",
+      Min: 0,
+      Max: "unbounded",
+    },
+    {
+      ID: "PER",
+      Min: 0,
+      Max: 3,
+    },
+    {
+      ID: "TAX",
+      Min: 0,
+      Max: 3,
+    },
+    {
+      ID: "FOB",
+      Min: 0,
+      Max: "unbounded",
+    },
+    {
+      ID: "CTP",
+      Min: 0,
+      Max: "unbounded",
+    },
+    {
+      ID: "PAM",
+      Min: 0,
+      Max: 10,
+    },
+    {
+      ID: "CSH",
+      Min: 0,
+      Max: 25,
+    },
+    {
+      ID: "SAC",
+      Min: 0,
+      Max: 25,
+    },
+    {
+      ID: "ITD",
+      Min: 0,
+      Max: 5,
+    },
+    {
+      ID: "DIS",
+      Min: 0,
+      Max: 20,
+    },
+    {
+      ID: "DTM",
+      Min: 0,
+      Max: 10,
+    },
+    {
+      ID: "LIN",
+      Min: 0,
+      Max: 5,
+    },
+    {
+      ID: "PID",
+      Min: 0,
+      Max: 200,
+    },
+    {
+      ID: "MEA",
+      Min: 0,
+      Max: 40,
+    },
+    {
+      ID: "PWK",
+      Min: 0,
+      Max: 25,
+    },
+    {
+      ID: "PKG",
+      Min: 0,
+      Max: 25,
+    },
+    {
+      ID: "TD1",
+      Min: 0,
+      Max: 2,
+    },
+    {
+      ID: "TD5",
+      Min: 0,
+      Max: 12,
+    },
+    {
+      ID: "TD3",
+      Min: 0,
+      Max: 12,
+    },
+    {
+      ID: "TD4",
+      Min: 0,
+      Max: 5,
+    },
+    {
+      ID: "MAN",
+      Min: 0,
+      Max: 10,
+    },
+    {
+      ID: "CTB",
+      Min: 0,
+      Max: 5,
+    },
+    {
+      ID: "CPR",
+      Min: 0,
+      Max: 2,
+    },
+    {
+      ID: "PCT",
+      Min: 0,
+      Max: "unbounded",
+    },
+    {
+      ID: "N9Loop1",
+      Min: 0,
+      Max: 1000,
+      Loop: [
         {
-            ID: "ST",
-            Min: 0,
+          ID: "N9",
         },
         {
-            ID: "BQR",
+          ID: "DTM",
+          Min: 0,
+          Max: "unbounded",
         },
         {
-            ID: "CUR",
-            Min: 0,
+          ID: "MTX",
+          Min: 0,
+          Max: "unbounded",
         },
         {
-            ID: "INC",
-            Min: 0,
+          ID: "PWK",
+          Min: 0,
+          Max: "unbounded",
         },
         {
-            ID: "REF",
-            Min: 0,
-            Max: "unbounded",
+          ID: "EFI",
+          Min: 0,
+          Max: "unbounded",
+        },
+      ],
+    },
+    {
+      ID: "N1Loop1",
+      Min: 0,
+      Max: 10000,
+      Loop: [
+        {
+          ID: "N1",
         },
         {
-            ID: "PER",
-            Min: 0,
-            Max: 3,
+          ID: "N2",
+          Min: 0,
+          Max: 2,
         },
         {
-            ID: "TAX",
-            Min: 0,
-            Max: 3,
+          ID: "N3",
+          Min: 0,
+          Max: 2,
         },
         {
-            ID: "FOB",
-            Min: 0,
-            Max: "unbounded",
+          ID: "N4",
+          Min: 0,
         },
         {
-            ID: "CTP",
-            Min: 0,
-            Max: "unbounded",
+          ID: "REF",
+          Min: 0,
+          Max: 12,
         },
         {
-            ID: "PAM",
-            Min: 0,
-            Max: 10,
+          ID: "PER",
+          Min: 0,
+          Max: "unbounded",
         },
         {
-            ID: "CSH",
-            Min: 0,
-            Max: 25,
+          ID: "SI",
+          Min: 0,
+          Max: "unbounded",
         },
         {
-            ID: "SAC",
-            Min: 0,
-            Max: 25,
+          ID: "FOB",
+          Min: 0,
         },
         {
-            ID: "ITD",
-            Min: 0,
-            Max: 5,
+          ID: "TD1",
+          Min: 0,
+          Max: 2,
         },
         {
-            ID: "DIS",
-            Min: 0,
-            Max: 20,
+          ID: "TD5",
+          Min: 0,
+          Max: 12,
         },
         {
-            ID: "DTM",
-            Min: 0,
-            Max: 10,
+          ID: "TD3",
+          Min: 0,
+          Max: 12,
         },
         {
-            ID: "LIN",
-            Min: 0,
-            Max: 5,
+          ID: "TD4",
+          Min: 0,
+          Max: 5,
         },
         {
-            ID: "PID",
-            Min: 0,
-            Max: 200,
+          ID: "PKG",
+          Min: 0,
+          Max: 25,
         },
         {
-            ID: "MEA",
-            Min: 0,
-            Max: 40,
+          ID: "MTX",
+          Min: 0,
+          Max: "unbounded",
+        },
+      ],
+    },
+    {
+      ID: "AMTLoop1",
+      Min: 0,
+      Max: "unbounded",
+      Loop: [
+        {
+          ID: "AMT",
         },
         {
-            ID: "PWK",
-            Min: 0,
-            Max: 25,
+          ID: "PCT",
+          Min: 0,
+          Max: "unbounded",
+        },
+      ],
+    },
+    {
+      ID: "ADVLoop1",
+      Min: 0,
+      Max: "unbounded",
+      Loop: [
+        {
+          ID: "ADV",
         },
         {
-            ID: "PKG",
-            Min: 0,
-            Max: 25,
+          ID: "DTM",
+          Min: 0,
+          Max: "unbounded",
         },
         {
-            ID: "TD1",
-            Min: 0,
-            Max: 2,
+          ID: "MTX",
+          Min: 0,
+          Max: "unbounded",
+        },
+      ],
+    },
+    {
+      ID: "LMLoop1",
+      Min: 0,
+      Max: "unbounded",
+      Loop: [
+        {
+          ID: "LM",
         },
         {
-            ID: "TD5",
-            Min: 0,
-            Max: 12,
+          ID: "LQ",
+          Max: "unbounded",
+        },
+      ],
+    },
+    {
+      ID: "LDTLoop1",
+      Min: 0,
+      Max: "unbounded",
+      Loop: [
+        {
+          ID: "LDT",
         },
         {
-            ID: "TD3",
-            Min: 0,
-            Max: 12,
+          ID: "QTY",
+          Min: 0,
+          Max: "unbounded",
         },
         {
-            ID: "TD4",
-            Min: 0,
-            Max: 5,
+          ID: "MTX",
+          Min: 0,
+          Max: "unbounded",
+        },
+      ],
+    },
+    {
+      ID: "PO1Loop1",
+      Min: 0,
+      Max: 100000,
+      Loop: [
+        {
+          ID: "PO1",
         },
         {
-            ID: "MAN",
-            Min: 0,
-            Max: 10,
+          ID: "LIN",
+          Min: 0,
+          Max: "unbounded",
         },
         {
-            ID: "CTB",
-            Min: 0,
-            Max: 5,
+          ID: "CUR",
+          Min: 0,
         },
         {
-            ID: "CPR",
-            Min: 0,
-            Max: 2,
+          ID: "PO3",
+          Min: 0,
+          Max: 25,
         },
         {
-            ID: "PCT",
-            Min: 0,
-            Max: "unbounded",
+          ID: "CTP",
+          Min: 0,
+          Max: "unbounded",
         },
         {
-            ID: "N9Loop1",
-            Min: 0,
-            Max: 1000,
-            Loop: [
-                {
-                    ID: "N9",
-                },
-                {
-                    ID: "DTM",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-                {
-                    ID: "MTX",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-                {
-                    ID: "PWK",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-                {
-                    ID: "EFI",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-            ],
+          ID: "PAM",
+          Min: 0,
+          Max: 10,
         },
         {
-            ID: "N1Loop1",
-            Min: 0,
-            Max: 10000,
-            Loop: [
-                {
-                    ID: "N1",
-                },
-                {
-                    ID: "N2",
-                    Min: 0,
-                    Max: 2,
-                },
-                {
-                    ID: "N3",
-                    Min: 0,
-                    Max: 2,
-                },
-                {
-                    ID: "N4",
-                    Min: 0,
-                },
-                {
-                    ID: "REF",
-                    Min: 0,
-                    Max: 12,
-                },
-                {
-                    ID: "PER",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-                {
-                    ID: "SI",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-                {
-                    ID: "FOB",
-                    Min: 0,
-                },
-                {
-                    ID: "TD1",
-                    Min: 0,
-                    Max: 2,
-                },
-                {
-                    ID: "TD5",
-                    Min: 0,
-                    Max: 12,
-                },
-                {
-                    ID: "TD3",
-                    Min: 0,
-                    Max: 12,
-                },
-                {
-                    ID: "TD4",
-                    Min: 0,
-                    Max: 5,
-                },
-                {
-                    ID: "PKG",
-                    Min: 0,
-                    Max: 25,
-                },
-                {
-                    ID: "MTX",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-            ],
+          ID: "MEA",
+          Min: 0,
+          Max: 40,
         },
         {
-            ID: "AMTLoop1",
-            Min: 0,
-            Max: "unbounded",
-            Loop: [
-                {
-                    ID: "AMT",
-                },
-                {
-                    ID: "PCT",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-            ],
+          ID: "PIDLoop1",
+          Min: 0,
+          Max: 1000,
+          Loop: [
+            {
+              ID: "PID",
+            },
+            {
+              ID: "MEA",
+              Min: 0,
+              Max: 10,
+            },
+          ],
         },
         {
-            ID: "ADVLoop1",
-            Min: 0,
-            Max: "unbounded",
-            Loop: [
-                {
-                    ID: "ADV",
-                },
-                {
-                    ID: "DTM",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-                {
-                    ID: "MTX",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-            ],
+          ID: "PWK",
+          Min: 0,
+          Max: 25,
         },
         {
-            ID: "LMLoop1",
-            Min: 0,
-            Max: "unbounded",
-            Loop: [
-                {
-                    ID: "LM",
-                },
-                {
-                    ID: "LQ",
-                    Max: "unbounded",
-                },
-            ],
+          ID: "PKG",
+          Min: 0,
+          Max: 25,
         },
         {
-            ID: "LDTLoop1",
-            Min: 0,
-            Max: "unbounded",
-            Loop: [
-                {
-                    ID: "LDT",
-                },
-                {
-                    ID: "QTY",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-                {
-                    ID: "MTX",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-            ],
+          ID: "PO4",
+          Min: 0,
+          Max: "unbounded",
         },
         {
-            ID: "PO1Loop1",
-            Min: 0,
-            Max: 100000,
-            Loop: [
-                {
-                    ID: "PO1",
-                },
-                {
-                    ID: "LIN",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-                {
-                    ID: "CUR",
-                    Min: 0,
-                },
-                {
-                    ID: "PO3",
-                    Min: 0,
-                    Max: 25,
-                },
-                {
-                    ID: "CTP",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-                {
-                    ID: "PAM",
-                    Min: 0,
-                    Max: 10,
-                },
-                {
-                    ID: "MEA",
-                    Min: 0,
-                    Max: 40,
-                },
-                {
-                    ID: "PIDLoop1",
-                    Min: 0,
-                    Max: 1000,
-                    Loop: [
-                        {
-                            ID: "PID",
-                        },
-                        {
-                            ID: "MEA",
-                            Min: 0,
-                            Max: 10,
-                        },
-                    ],
-                },
-                {
-                    ID: "PWK",
-                    Min: 0,
-                    Max: 25,
-                },
-                {
-                    ID: "PKG",
-                    Min: 0,
-                    Max: 25,
-                },
-                {
-                    ID: "PO4",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-                {
-                    ID: "REF",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-                {
-                    ID: "PER",
-                    Min: 0,
-                    Max: 3,
-                },
-                {
-                    ID: "SAC",
-                    Min: 0,
-                    Max: 25,
-                },
-                {
-                    ID: "IT8",
-                    Min: 0,
-                    Max: 25,
-                },
-                {
-                    ID: "CSH",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-                {
-                    ID: "ITD",
-                    Min: 0,
-                    Max: 2,
-                },
-                {
-                    ID: "DIS",
-                    Min: 0,
-                    Max: 20,
-                },
-                {
-                    ID: "INC",
-                    Min: 0,
-                },
-                {
-                    ID: "TAX",
-                    Min: 0,
-                    Max: 3,
-                },
-                {
-                    ID: "FOB",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-                {
-                    ID: "SDQ",
-                    Min: 0,
-                    Max: 50,
-                },
-                {
-                    ID: "DTM",
-                    Min: 0,
-                    Max: 10,
-                },
-                {
-                    ID: "FST",
-                    Min: 0,
-                    Max: 5,
-                },
-                {
-                    ID: "TD1",
-                    Min: 0,
-                },
-                {
-                    ID: "TD5",
-                    Min: 0,
-                    Max: 12,
-                },
-                {
-                    ID: "TD3",
-                    Min: 0,
-                    Max: 12,
-                },
-                {
-                    ID: "TD4",
-                    Min: 0,
-                    Max: 5,
-                },
-                {
-                    ID: "MAN",
-                    Min: 0,
-                    Max: 10,
-                },
-                {
-                    ID: "MTX",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-                {
-                    ID: "PCT",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-                {
-                    ID: "CTB",
-                    Min: 0,
-                    Max: 5,
-                },
-                {
-                    ID: "SPI",
-                    Min: 0,
-                    Max: "unbounded",
-                },
-                {
-                    ID: "LMLoop2",
-                    Min: 0,
-                    Max: "unbounded",
-                    Loop: [
-                        {
-                            ID: "LM",
-                        },
-                        {
-                            ID: "LQ",
-                            Max: "unbounded",
-                        },
-                    ],
-                },
-                {
-                    ID: "QTYLoop1",
-                    Min: 0,
-                    Max: "unbounded",
-                    Loop: [
-                        {
-                            ID: "QTY",
-                        },
-                        {
-                            ID: "SI",
-                            Min: 0,
-                            Max: "unbounded",
-                        },
-                    ],
-                },
-                {
-                    ID: "SCHLoop1",
-                    Min: 0,
-                    Max: 104,
-                    Loop: [
-                        {
-                            ID: "SCH",
-                        },
-                        {
-                            ID: "TD1",
-                            Min: 0,
-                        },
-                        {
-                            ID: "TD5",
-                            Min: 0,
-                            Max: 12,
-                        },
-                        {
-                            ID: "TD3",
-                            Min: 0,
-                            Max: 12,
-                        },
-                        {
-                            ID: "TD4",
-                            Min: 0,
-                            Max: 5,
-                        },
-                        {
-                            ID: "REF",
-                            Min: 0,
-                            Max: "unbounded",
-                        },
-                    ],
-                },
-                {
-                    ID: "CSTLoop1",
-                    Min: 0,
-                    Max: 100,
-                    Loop: [
-                        {
-                            ID: "CST",
-                        },
-                        {
-                            ID: "PID",
-                            Min: 0,
-                        },
-                        {
-                            ID: "CUR",
-                            Min: 0,
-                        },
-                        {
-                            ID: "DTM",
-                            Min: 0,
-                            Max: 2,
-                        },
-                    ],
-                },
-                {
-                    ID: "SLNLoop1",
-                    Min: 0,
-                    Max: 1000,
-                    Loop: [
-                        {
-                            ID: "SLN",
-                        },
-                        {
-                            ID: "MTX",
-                            Min: 0,
-                            Max: "unbounded",
-                        },
-                        {
-                            ID: "PID",
-                            Min: 0,
-                            Max: 1000,
-                        },
-                        {
-                            ID: "ADV",
-                            Min: 0,
-                            Max: "unbounded",
-                        },
-                        {
-                            ID: "QTYLoop2",
-                            Min: 0,
-                            Max: "unbounded",
-                            Loop: [
-                                {
-                                    ID: "QTY",
-                                },
-                                {
-                                    ID: "SI",
-                                    Min: 0,
-                                    Max: "unbounded",
-                                },
-                            ],
-                        },
-                        {
-                            ID: "CSTLoop2",
-                            Min: 0,
-                            Max: 100,
-                            Loop: [
-                                {
-                                    ID: "CST",
-                                },
-                                {
-                                    ID: "PID",
-                                    Min: 0,
-                                },
-                                {
-                                    ID: "CUR",
-                                    Min: 0,
-                                },
-                                {
-                                    ID: "DTM",
-                                    Min: 0,
-                                    Max: 2,
-                                },
-                            ],
-                        },
-                    ],
-                },
-                {
-                    ID: "PDLoop1",
-                    Min: 0,
-                    Max: "unbounded",
-                    Loop: [
-                        {
-                            ID: "PD",
-                        },
-                        {
-                            ID: "PDD",
-                            Min: 0,
-                            Max: "unbounded",
-                        },
-                    ],
-                },
-                {
-                    ID: "LDTLoop2",
-                    Min: 0,
-                    Max: "unbounded",
-                    Loop: [
-                        {
-                            ID: "LDT",
-                        },
-                        {
-                            ID: "QTY",
-                            Min: 0,
-                            Max: "unbounded",
-                        },
-                        {
-                            ID: "MTX",
-                            Min: 0,
-                            Max: "unbounded",
-                        },
-                        {
-                            ID: "LMLoop3",
-                            Min: 0,
-                            Max: "unbounded",
-                            Loop: [
-                                {
-                                    ID: "LM",
-                                },
-                                {
-                                    ID: "LQ",
-                                    Max: "unbounded",
-                                },
-                            ],
-                        },
-                    ],
-                },
-                {
-                    ID: "N9Loop2",
-                    Min: 0,
-                    Max: 1000,
-                    Loop: [
-                        {
-                            ID: "N9",
-                        },
-                        {
-                            ID: "DTM",
-                            Min: 0,
-                            Max: "unbounded",
-                        },
-                        {
-                            ID: "MTX",
-                            Min: 0,
-                            Max: "unbounded",
-                        },
-                        {
-                            ID: "PWK",
-                            Min: 0,
-                            Max: "unbounded",
-                        },
-                        {
-                            ID: "EFI",
-                            Min: 0,
-                            Max: "unbounded",
-                        },
-                    ],
-                },
-                {
-                    ID: "N1Loop2",
-                    Min: 0,
-                    Max: "unbounded",
-                    Loop: [
-                        {
-                            ID: "N1",
-                        },
-                        {
-                            ID: "N2",
-                            Min: 0,
-                            Max: 2,
-                        },
-                        {
-                            ID: "N3",
-                            Min: 0,
-                            Max: 2,
-                        },
-                        {
-                            ID: "N4",
-                            Min: 0,
-                        },
-                        {
-                            ID: "QTY",
-                            Min: 0,
-                            Max: "unbounded",
-                        },
-                        {
-                            ID: "REF",
-                            Min: 0,
-                            Max: 12,
-                        },
-                        {
-                            ID: "PER",
-                            Min: 0,
-                            Max: 3,
-                        },
-                        {
-                            ID: "SI",
-                            Min: 0,
-                            Max: "unbounded",
-                        },
-                        {
-                            ID: "DTM",
-                            Min: 0,
-                        },
-                        {
-                            ID: "FOB",
-                            Min: 0,
-                        },
-                        {
-                            ID: "SCH",
-                            Min: 0,
-                            Max: 200,
-                        },
-                        {
-                            ID: "TD1",
-                            Min: 0,
-                            Max: 2,
-                        },
-                        {
-                            ID: "TD5",
-                            Min: 0,
-                            Max: 12,
-                        },
-                        {
-                            ID: "TD3",
-                            Min: 0,
-                            Max: 12,
-                        },
-                        {
-                            ID: "TD4",
-                            Min: 0,
-                            Max: 5,
-                        },
-                        {
-                            ID: "PKG",
-                            Min: 0,
-                            Max: 25,
-                        },
-                        {
-                            ID: "LDTLoop3",
-                            Min: 0,
-                            Max: "unbounded",
-                            Loop: [
-                                {
-                                    ID: "LDT",
-                                },
-                                {
-                                    ID: "MAN",
-                                    Min: 0,
-                                    Max: 10,
-                                },
-                                {
-                                    ID: "QTY",
-                                    Min: 0,
-                                    Max: 5,
-                                },
-                                {
-                                    ID: "MTX",
-                                    Min: 0,
-                                    Max: "unbounded",
-                                },
-                            ],
-                        },
-                    ],
-                },
-                {
-                    ID: "AMTLoop2",
-                    Min: 0,
-                    Max: "unbounded",
-                    Loop: [
-                        {
-                            ID: "AMT",
-                        },
-                        {
-                            ID: "PCT",
-                            Min: 0,
-                            Max: "unbounded",
-                        },
-                    ],
-                },
-            ],
+          ID: "REF",
+          Min: 0,
+          Max: "unbounded",
         },
         {
-            ID: "CTTLoop1",
-            Min: 0,
-            Loop: [
-                {
-                    ID: "CTT",
-                },
-                {
-                    ID: "AMT",
-                    Min: 0,
-                },
-            ],
+          ID: "PER",
+          Min: 0,
+          Max: 3,
         },
         {
-            ID: "SE",
-            Min: 0,
+          ID: "SAC",
+          Min: 0,
+          Max: 25,
         },
-    ],
+        {
+          ID: "IT8",
+          Min: 0,
+          Max: 25,
+        },
+        {
+          ID: "CSH",
+          Min: 0,
+          Max: "unbounded",
+        },
+        {
+          ID: "ITD",
+          Min: 0,
+          Max: 2,
+        },
+        {
+          ID: "DIS",
+          Min: 0,
+          Max: 20,
+        },
+        {
+          ID: "INC",
+          Min: 0,
+        },
+        {
+          ID: "TAX",
+          Min: 0,
+          Max: 3,
+        },
+        {
+          ID: "FOB",
+          Min: 0,
+          Max: "unbounded",
+        },
+        {
+          ID: "SDQ",
+          Min: 0,
+          Max: 50,
+        },
+        {
+          ID: "DTM",
+          Min: 0,
+          Max: 10,
+        },
+        {
+          ID: "FST",
+          Min: 0,
+          Max: 5,
+        },
+        {
+          ID: "TD1",
+          Min: 0,
+        },
+        {
+          ID: "TD5",
+          Min: 0,
+          Max: 12,
+        },
+        {
+          ID: "TD3",
+          Min: 0,
+          Max: 12,
+        },
+        {
+          ID: "TD4",
+          Min: 0,
+          Max: 5,
+        },
+        {
+          ID: "MAN",
+          Min: 0,
+          Max: 10,
+        },
+        {
+          ID: "MTX",
+          Min: 0,
+          Max: "unbounded",
+        },
+        {
+          ID: "PCT",
+          Min: 0,
+          Max: "unbounded",
+        },
+        {
+          ID: "CTB",
+          Min: 0,
+          Max: 5,
+        },
+        {
+          ID: "SPI",
+          Min: 0,
+          Max: "unbounded",
+        },
+        {
+          ID: "LMLoop2",
+          Min: 0,
+          Max: "unbounded",
+          Loop: [
+            {
+              ID: "LM",
+            },
+            {
+              ID: "LQ",
+              Max: "unbounded",
+            },
+          ],
+        },
+        {
+          ID: "QTYLoop1",
+          Min: 0,
+          Max: "unbounded",
+          Loop: [
+            {
+              ID: "QTY",
+            },
+            {
+              ID: "SI",
+              Min: 0,
+              Max: "unbounded",
+            },
+          ],
+        },
+        {
+          ID: "SCHLoop1",
+          Min: 0,
+          Max: 104,
+          Loop: [
+            {
+              ID: "SCH",
+            },
+            {
+              ID: "TD1",
+              Min: 0,
+            },
+            {
+              ID: "TD5",
+              Min: 0,
+              Max: 12,
+            },
+            {
+              ID: "TD3",
+              Min: 0,
+              Max: 12,
+            },
+            {
+              ID: "TD4",
+              Min: 0,
+              Max: 5,
+            },
+            {
+              ID: "REF",
+              Min: 0,
+              Max: "unbounded",
+            },
+          ],
+        },
+        {
+          ID: "CSTLoop1",
+          Min: 0,
+          Max: 100,
+          Loop: [
+            {
+              ID: "CST",
+            },
+            {
+              ID: "PID",
+              Min: 0,
+            },
+            {
+              ID: "CUR",
+              Min: 0,
+            },
+            {
+              ID: "DTM",
+              Min: 0,
+              Max: 2,
+            },
+          ],
+        },
+        {
+          ID: "SLNLoop1",
+          Min: 0,
+          Max: 1000,
+          Loop: [
+            {
+              ID: "SLN",
+            },
+            {
+              ID: "MTX",
+              Min: 0,
+              Max: "unbounded",
+            },
+            {
+              ID: "PID",
+              Min: 0,
+              Max: 1000,
+            },
+            {
+              ID: "ADV",
+              Min: 0,
+              Max: "unbounded",
+            },
+            {
+              ID: "QTYLoop2",
+              Min: 0,
+              Max: "unbounded",
+              Loop: [
+                {
+                  ID: "QTY",
+                },
+                {
+                  ID: "SI",
+                  Min: 0,
+                  Max: "unbounded",
+                },
+              ],
+            },
+            {
+              ID: "CSTLoop2",
+              Min: 0,
+              Max: 100,
+              Loop: [
+                {
+                  ID: "CST",
+                },
+                {
+                  ID: "PID",
+                  Min: 0,
+                },
+                {
+                  ID: "CUR",
+                  Min: 0,
+                },
+                {
+                  ID: "DTM",
+                  Min: 0,
+                  Max: 2,
+                },
+              ],
+            },
+          ],
+        },
+        {
+          ID: "PDLoop1",
+          Min: 0,
+          Max: "unbounded",
+          Loop: [
+            {
+              ID: "PD",
+            },
+            {
+              ID: "PDD",
+              Min: 0,
+              Max: "unbounded",
+            },
+          ],
+        },
+        {
+          ID: "LDTLoop2",
+          Min: 0,
+          Max: "unbounded",
+          Loop: [
+            {
+              ID: "LDT",
+            },
+            {
+              ID: "QTY",
+              Min: 0,
+              Max: "unbounded",
+            },
+            {
+              ID: "MTX",
+              Min: 0,
+              Max: "unbounded",
+            },
+            {
+              ID: "LMLoop3",
+              Min: 0,
+              Max: "unbounded",
+              Loop: [
+                {
+                  ID: "LM",
+                },
+                {
+                  ID: "LQ",
+                  Max: "unbounded",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          ID: "N9Loop2",
+          Min: 0,
+          Max: 1000,
+          Loop: [
+            {
+              ID: "N9",
+            },
+            {
+              ID: "DTM",
+              Min: 0,
+              Max: "unbounded",
+            },
+            {
+              ID: "MTX",
+              Min: 0,
+              Max: "unbounded",
+            },
+            {
+              ID: "PWK",
+              Min: 0,
+              Max: "unbounded",
+            },
+            {
+              ID: "EFI",
+              Min: 0,
+              Max: "unbounded",
+            },
+          ],
+        },
+        {
+          ID: "N1Loop2",
+          Min: 0,
+          Max: "unbounded",
+          Loop: [
+            {
+              ID: "N1",
+            },
+            {
+              ID: "N2",
+              Min: 0,
+              Max: 2,
+            },
+            {
+              ID: "N3",
+              Min: 0,
+              Max: 2,
+            },
+            {
+              ID: "N4",
+              Min: 0,
+            },
+            {
+              ID: "QTY",
+              Min: 0,
+              Max: "unbounded",
+            },
+            {
+              ID: "REF",
+              Min: 0,
+              Max: 12,
+            },
+            {
+              ID: "PER",
+              Min: 0,
+              Max: 3,
+            },
+            {
+              ID: "SI",
+              Min: 0,
+              Max: "unbounded",
+            },
+            {
+              ID: "DTM",
+              Min: 0,
+            },
+            {
+              ID: "FOB",
+              Min: 0,
+            },
+            {
+              ID: "SCH",
+              Min: 0,
+              Max: 200,
+            },
+            {
+              ID: "TD1",
+              Min: 0,
+              Max: 2,
+            },
+            {
+              ID: "TD5",
+              Min: 0,
+              Max: 12,
+            },
+            {
+              ID: "TD3",
+              Min: 0,
+              Max: 12,
+            },
+            {
+              ID: "TD4",
+              Min: 0,
+              Max: 5,
+            },
+            {
+              ID: "PKG",
+              Min: 0,
+              Max: 25,
+            },
+            {
+              ID: "LDTLoop3",
+              Min: 0,
+              Max: "unbounded",
+              Loop: [
+                {
+                  ID: "LDT",
+                },
+                {
+                  ID: "MAN",
+                  Min: 0,
+                  Max: 10,
+                },
+                {
+                  ID: "QTY",
+                  Min: 0,
+                  Max: 5,
+                },
+                {
+                  ID: "MTX",
+                  Min: 0,
+                  Max: "unbounded",
+                },
+              ],
+            },
+          ],
+        },
+        {
+          ID: "AMTLoop2",
+          Min: 0,
+          Max: "unbounded",
+          Loop: [
+            {
+              ID: "AMT",
+            },
+            {
+              ID: "PCT",
+              Min: 0,
+              Max: "unbounded",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      ID: "CTTLoop1",
+      Min: 0,
+      Loop: [
+        {
+          ID: "CTT",
+        },
+        {
+          ID: "AMT",
+          Min: 0,
+        },
+      ],
+    },
+    {
+      ID: "SE",
+      Min: 0,
+    },
+  ],
 };
 validate.errors = null;
 module.exports = validate;

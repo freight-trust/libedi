@@ -10,27 +10,27 @@ var BaseModel = require("./BaseModel");
  * @constructor
  */
 EventResponseModel = function (obj) {
-    if(!obj) {
-        this.time = null;
-        this.status = null;
-        this.headers = null;
-        this.body = null;
-        this.ipAddress = null;
-        this.transferEncoding = null;
-        //Append to variable dictionary
-        this._variableDict['ipAddress'] = 'ip_address';
-        this._variableDict['transferEncoding'] = 'transfer_encoding';
-    } else {
-        this.time = new Date(obj.time);
-        this.status = obj.status;
-        this.headers = obj.headers;
-        this.body = obj.body;
-        this.ipAddress = obj.ipAddress;
-        this.transferEncoding = obj.transferEncoding;     
-        //Append to variable dictionary
-        this._variableDict['ipAddress'] = 'ip_address';
-        this._variableDict['transferEncoding'] = 'transfer_encoding';
-    }
+  if (!obj) {
+    this.time = null;
+    this.status = null;
+    this.headers = null;
+    this.body = null;
+    this.ipAddress = null;
+    this.transferEncoding = null;
+    //Append to variable dictionary
+    this._variableDict["ipAddress"] = "ip_address";
+    this._variableDict["transferEncoding"] = "transfer_encoding";
+  } else {
+    this.time = new Date(obj.time);
+    this.status = obj.status;
+    this.headers = obj.headers;
+    this.body = obj.body;
+    this.ipAddress = obj.ipAddress;
+    this.transferEncoding = obj.transferEncoding;
+    //Append to variable dictionary
+    this._variableDict["ipAddress"] = "ip_address";
+    this._variableDict["transferEncoding"] = "transfer_encoding";
+  }
 };
 
 EventResponseModel.prototype = new BaseModel();
@@ -41,8 +41,8 @@ EventResponseModel.prototype.constructor = EventResponseModel;
  *
  * @return {dateTime}
  */
-EventResponseModel.prototype.getTime = function() {
-    return this.time;
+EventResponseModel.prototype.getTime = function () {
+  return this.time;
 };
 
 /**
@@ -50,8 +50,8 @@ EventResponseModel.prototype.getTime = function() {
  *
  * @param {dateTime} value
  */
-EventResponseModel.prototype.setTime = function(value) {
-    this.time = value;
+EventResponseModel.prototype.setTime = function (value) {
+  this.time = value;
 };
 
 /**
@@ -59,8 +59,8 @@ EventResponseModel.prototype.setTime = function(value) {
  *
  * @return {int}
  */
-EventResponseModel.prototype.getStatus = function() {
-    return this.status;
+EventResponseModel.prototype.getStatus = function () {
+  return this.status;
 };
 
 /**
@@ -68,8 +68,8 @@ EventResponseModel.prototype.getStatus = function() {
  *
  * @param {int} value
  */
-EventResponseModel.prototype.setStatus = function(value) {
-    this.status = value;
+EventResponseModel.prototype.setStatus = function (value) {
+  this.status = value;
 };
 
 /**
@@ -77,8 +77,8 @@ EventResponseModel.prototype.setStatus = function(value) {
  *
  * @return {object}
  */
-EventResponseModel.prototype.getHeaders = function() {
-    return this.headers;
+EventResponseModel.prototype.getHeaders = function () {
+  return this.headers;
 };
 
 /**
@@ -86,8 +86,8 @@ EventResponseModel.prototype.getHeaders = function() {
  *
  * @param {object} value
  */
-EventResponseModel.prototype.setHeaders = function(value) {
-    this.headers = value;
+EventResponseModel.prototype.setHeaders = function (value) {
+  this.headers = value;
 };
 
 /**
@@ -95,8 +95,8 @@ EventResponseModel.prototype.setHeaders = function(value) {
  *
  * @return {object}
  */
-EventResponseModel.prototype.getBody = function() {
-    return this.body;
+EventResponseModel.prototype.getBody = function () {
+  return this.body;
 };
 
 /**
@@ -104,8 +104,8 @@ EventResponseModel.prototype.getBody = function() {
  *
  * @param {object} value
  */
-EventResponseModel.prototype.setBody = function(value) {
-    this.body = value;
+EventResponseModel.prototype.setBody = function (value) {
+  this.body = value;
 };
 
 /**
@@ -113,8 +113,8 @@ EventResponseModel.prototype.setBody = function(value) {
  *
  * @return {string|null}
  */
-EventResponseModel.prototype.getIpAddress = function() {
-    return this.ipAddress;
+EventResponseModel.prototype.getIpAddress = function () {
+  return this.ipAddress;
 };
 
 /**
@@ -122,9 +122,8 @@ EventResponseModel.prototype.getIpAddress = function() {
  *
  * @param {string|null} value
  */
-EventResponseModel.prototype.setIpAddress = function(value) {
-    this.ipAddress = value;
+EventResponseModel.prototype.setIpAddress = function (value) {
+  this.ipAddress = value;
 };
-
 
 module.exports = EventResponseModel;

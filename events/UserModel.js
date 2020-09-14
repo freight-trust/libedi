@@ -1,5 +1,5 @@
 /**
- * 
+ *
  *
  * modifiedTime: Option[DateTime],
  * ipAddress: Option[String],
@@ -18,7 +18,7 @@ var CampaignModel = require("./CampaignModel");
  * @constructor
  */
 var UserModel = function (obj) {
-  if(!obj) {
+  if (!obj) {
     this.userId = null;
     this.companyId = null;
     this.modifiedTime = null;
@@ -28,8 +28,8 @@ var UserModel = function (obj) {
     this.metadata = null;
     this.campaign = null;
     // Append to variable dictionary
-    this._variableDict['userId'] = 'user_id'; 
-    this._variableDict['companyId'] = 'company_id'; 
+    this._variableDict["userId"] = "user_id";
+    this._variableDict["companyId"] = "company_id";
   } else {
     this.userId = obj.userId;
     this.companyId = obj.companyId;
@@ -39,8 +39,8 @@ var UserModel = function (obj) {
     this.userAgentString = obj.userAgentString;
     this.metadata = obj.metadata;
     this.campaign = new CampaignModel(obj.campaign);
-    this._variableDict['userId'] = 'user_id';
-    this._variableDict['companyId'] = 'company_id';
+    this._variableDict["userId"] = "user_id";
+    this._variableDict["companyId"] = "company_id";
   }
 };
 
@@ -52,16 +52,16 @@ UserModel.prototype.constructor = UserModel;
  *
  * @return {dateTime}
  */
-UserModel.prototype.getModifiedTime = function() {
+UserModel.prototype.getModifiedTime = function () {
   return this.modifiedTime;
 };
 
 /**
-* Setter for modified time
-*
-* @param {dateTime} value
-*/
-UserModel.prototype.setModifiedTime = function(value) {
+ * Setter for modified time
+ *
+ * @param {dateTime} value
+ */
+UserModel.prototype.setModifiedTime = function (value) {
   this.modifiedTime = value;
 };
 
@@ -70,16 +70,16 @@ UserModel.prototype.setModifiedTime = function(value) {
  *
  * @return {string}
  */
-UserModel.prototype.getUserId = function() {
+UserModel.prototype.getUserId = function () {
   return this.userId;
 };
 
 /**
-* Setter for the user Id
-*
-* @param {string} value
-*/
-UserModel.prototype.setUserId = function(value) {
+ * Setter for the user Id
+ *
+ * @param {string} value
+ */
+UserModel.prototype.setUserId = function (value) {
   this.userId = value;
 };
 
@@ -88,16 +88,16 @@ UserModel.prototype.setUserId = function(value) {
  *
  * @return {string|null}
  */
-UserModel.prototype.getUserAgentString = function() {
+UserModel.prototype.getUserAgentString = function () {
   return this.userAgentString;
 };
 
 /**
-* Setter for the user agent string
-*
-* @param {string|null} value
-*/
-UserModel.prototype.setUserAgentString = function(value) {
+ * Setter for the user agent string
+ *
+ * @param {string|null} value
+ */
+UserModel.prototype.setUserAgentString = function (value) {
   this.userAgentString = value;
 };
 
@@ -106,16 +106,16 @@ UserModel.prototype.setUserAgentString = function(value) {
  *
  * @return {string|null}
  */
-UserModel.prototype.getCompanyId = function() {
+UserModel.prototype.getCompanyId = function () {
   return this.companyId;
 };
 
 /**
-* Setter for the company Id
-*
-* @param {string|null} value
-*/
-UserModel.prototype.setCompanyId = function(value) {
+ * Setter for the company Id
+ *
+ * @param {string|null} value
+ */
+UserModel.prototype.setCompanyId = function (value) {
   this.companyId = value;
 };
 
@@ -124,16 +124,16 @@ UserModel.prototype.setCompanyId = function(value) {
  *
  * @return {string|null}
  */
-UserModel.prototype.getIpAddress = function() {
+UserModel.prototype.getIpAddress = function () {
   return this.ipAddress;
 };
 
 /**
-* Setter for the ip address
-*
-* @param {string|null} value
-*/
-UserModel.prototype.setIpAddress = function(value) {
+ * Setter for the ip address
+ *
+ * @param {string|null} value
+ */
+UserModel.prototype.setIpAddress = function (value) {
   this.ipAddress = value;
 };
 
@@ -142,16 +142,16 @@ UserModel.prototype.setIpAddress = function(value) {
  *
  * @return {string|null}
  */
-UserModel.prototype.getSessionToken = function() {
+UserModel.prototype.getSessionToken = function () {
   return this.sessionToken;
 };
 
 /**
-* Setter for the session token
-*
-* @param {string|null} value
-*/
-UserModel.prototype.setSessionToken = function(value) {
+ * Setter for the session token
+ *
+ * @param {string|null} value
+ */
+UserModel.prototype.setSessionToken = function (value) {
   this.sessionToken = value;
 };
 
@@ -160,7 +160,7 @@ UserModel.prototype.setSessionToken = function(value) {
  *
  * @return {object|null}
  */
-UserModel.prototype.getMetadata = function() {
+UserModel.prototype.getMetadata = function () {
   return this.metadata;
 };
 
@@ -169,7 +169,7 @@ UserModel.prototype.getMetadata = function() {
  *
  * @param {object|null} value
  */
-UserModel.prototype.setMetadata = function(value) {
+UserModel.prototype.setMetadata = function (value) {
   this.metadata = value;
 };
 
@@ -178,16 +178,16 @@ UserModel.prototype.setMetadata = function(value) {
  *
  * @return {CampaignModel|null}
  */
-UserModel.prototype.getCampaign = function() {
+UserModel.prototype.getCampaign = function () {
   return this.campaign;
 };
 
 /**
-* Setter for the Campaign object
-*
-* @param {CampaignModel|null} value
-*/
-UserModel.prototype.setCampaign = function(value) {
+ * Setter for the Campaign object
+ *
+ * @param {CampaignModel|null} value
+ */
+UserModel.prototype.setCampaign = function (value) {
   this.campaign = value;
 };
 

@@ -11,35 +11,35 @@ var EventResponseModel = require("./EventResponseModel");
  * @constructor
  */
 var EventModel = function (obj) {
-    if(!obj) {
-        this.request = null;
-        this.response = null;
-        this.sessionToken = null;
-        this.tags = null;
-        this.userId = null;
-        this.companyId = null;
-        this.metadata = null;
-        this.direction = null;
-        this.weight = null;
-        //Append to variable dictionary
-        this._variableDict['sessionToken'] = 'session_token';
-        this._variableDict['userId'] = 'user_id';
-        this._variableDict['companyId'] = 'company_id';
-    } else {
-        this.request = new EventRequestModel(obj.request);
-        this.response = new EventResponseModel(obj.response);
-        this.sessionToken = obj.sessionToken;
-        this.tags = obj.tags;
-        this.userId = obj.userId;
-        this.companyId = obj.companyId;
-        this.metadata = obj.metadata;
-        this.direction = obj.direction;
-        this.weight = obj.weight;
-        //Append to variable dictionary
-        this._variableDict['sessionToken'] = 'session_token';
-        this._variableDict['userId'] = 'user_id';
-        this._variableDict['companyId'] = 'company_id';
-    }
+  if (!obj) {
+    this.request = null;
+    this.response = null;
+    this.sessionToken = null;
+    this.tags = null;
+    this.userId = null;
+    this.companyId = null;
+    this.metadata = null;
+    this.direction = null;
+    this.weight = null;
+    //Append to variable dictionary
+    this._variableDict["sessionToken"] = "session_token";
+    this._variableDict["userId"] = "user_id";
+    this._variableDict["companyId"] = "company_id";
+  } else {
+    this.request = new EventRequestModel(obj.request);
+    this.response = new EventResponseModel(obj.response);
+    this.sessionToken = obj.sessionToken;
+    this.tags = obj.tags;
+    this.userId = obj.userId;
+    this.companyId = obj.companyId;
+    this.metadata = obj.metadata;
+    this.direction = obj.direction;
+    this.weight = obj.weight;
+    //Append to variable dictionary
+    this._variableDict["sessionToken"] = "session_token";
+    this._variableDict["userId"] = "user_id";
+    this._variableDict["companyId"] = "company_id";
+  }
 };
 
 EventModel.prototype = new BaseModel();
@@ -50,8 +50,8 @@ EventModel.prototype.constructor = EventModel;
  *
  * @return {EventRequestModel}
  */
-EventModel.prototype.getRequest = function() {
-    return this.request;
+EventModel.prototype.getRequest = function () {
+  return this.request;
 };
 
 /**
@@ -59,8 +59,8 @@ EventModel.prototype.getRequest = function() {
  *
  * @param {EventRequestModel} value
  */
-EventModel.prototype.setRequest = function(value) {
-    this.request = value;
+EventModel.prototype.setRequest = function (value) {
+  this.request = value;
 };
 
 /**
@@ -68,8 +68,8 @@ EventModel.prototype.setRequest = function(value) {
  *
  * @return {EventResponseModel|null}
  */
-EventModel.prototype.getResponse = function() {
-    return this.response;
+EventModel.prototype.getResponse = function () {
+  return this.response;
 };
 
 /**
@@ -77,8 +77,8 @@ EventModel.prototype.getResponse = function() {
  *
  * @param {EventResponseModel|null} value
  */
-EventModel.prototype.setResponse = function(value) {
-    this.response = value;
+EventModel.prototype.setResponse = function (value) {
+  this.response = value;
 };
 
 /**
@@ -86,8 +86,8 @@ EventModel.prototype.setResponse = function(value) {
  *
  * @return {string|null}
  */
-EventModel.prototype.getSessionToken = function() {
-    return this.sessionToken;
+EventModel.prototype.getSessionToken = function () {
+  return this.sessionToken;
 };
 
 /**
@@ -95,8 +95,8 @@ EventModel.prototype.getSessionToken = function() {
  *
  * @param {string|null} value
  */
-EventModel.prototype.setSessionToken = function(value) {
-    this.sessionToken = value;
+EventModel.prototype.setSessionToken = function (value) {
+  this.sessionToken = value;
 };
 
 /**
@@ -104,8 +104,8 @@ EventModel.prototype.setSessionToken = function(value) {
  *
  * @return {string|null}
  */
-EventModel.prototype.getTags = function() {
-    return this.tags;
+EventModel.prototype.getTags = function () {
+  return this.tags;
 };
 
 /**
@@ -113,8 +113,8 @@ EventModel.prototype.getTags = function() {
  *
  * @param {string|null} value
  */
-EventModel.prototype.setTags = function(value) {
-    this.tags = value;
+EventModel.prototype.setTags = function (value) {
+  this.tags = value;
 };
 
 /**
@@ -122,8 +122,8 @@ EventModel.prototype.setTags = function(value) {
  *
  * @return {string|null}
  */
-EventModel.prototype.getUserId = function() {
-    return this.userId;
+EventModel.prototype.getUserId = function () {
+  return this.userId;
 };
 
 /**
@@ -131,8 +131,8 @@ EventModel.prototype.getUserId = function() {
  *
  * @param {string|null} value
  */
-EventModel.prototype.setUserId = function(value) {
-    this.userId = value;
+EventModel.prototype.setUserId = function (value) {
+  this.userId = value;
 };
 
 /**
@@ -140,8 +140,8 @@ EventModel.prototype.setUserId = function(value) {
  *
  * @return {string|null}
  */
-EventModel.prototype.getCompanyId = function() {
-    return this.companyId;
+EventModel.prototype.getCompanyId = function () {
+  return this.companyId;
 };
 
 /**
@@ -149,17 +149,16 @@ EventModel.prototype.getCompanyId = function() {
  *
  * @param {string|null} value
  */
-EventModel.prototype.setCompanyId = function(value) {
-    this.companyId = value;
+EventModel.prototype.setCompanyId = function (value) {
+  this.companyId = value;
 };
-
 
 /**
  * Metadata in JSON.
  *
  * @return {object|null}
  */
-EventModel.prototype.getMetadata = function() {
+EventModel.prototype.getMetadata = function () {
   return this.metadata;
 };
 
@@ -168,7 +167,7 @@ EventModel.prototype.getMetadata = function() {
  *
  * @param {object|null} value
  */
-EventModel.prototype.setMetadata = function(value) {
+EventModel.prototype.setMetadata = function (value) {
   this.metadata = value;
 };
 
@@ -177,8 +176,8 @@ EventModel.prototype.setMetadata = function(value) {
  *
  * @return {string|null}
  */
-EventModel.prototype.getDirection = function() {
-    return this.direction;
+EventModel.prototype.getDirection = function () {
+  return this.direction;
 };
 
 /**
@@ -186,8 +185,8 @@ EventModel.prototype.getDirection = function() {
  *
  * @param {string|null} value
  */
-EventModel.prototype.setDirection = function(value) {
-    this.direction = value;
+EventModel.prototype.setDirection = function (value) {
+  this.direction = value;
 };
 
 /**
@@ -195,8 +194,8 @@ EventModel.prototype.setDirection = function(value) {
  *
  * @return {number|null}
  */
-EventModel.prototype.getWeight = function() {
-    return this.weight;
+EventModel.prototype.getWeight = function () {
+  return this.weight;
 };
 
 /**
@@ -204,8 +203,8 @@ EventModel.prototype.getWeight = function() {
  *
  * @param {number|null} value
  */
-EventModel.prototype.setWeight = function(value) {
-    this.weight = value;
+EventModel.prototype.setWeight = function (value) {
+  this.weight = value;
 };
 
 module.exports = EventModel;
